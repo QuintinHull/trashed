@@ -32,10 +32,10 @@ const updateOneArea = (area) => {
   };
 };
 
-const deleteArea = (area) => {
+const deleteOneArea = (id) => {
   return {
     type: DELETE_AREA,
-    payload: area,
+    payload: id,
   };
 };
 
@@ -82,11 +82,68 @@ export const createArea = ({
 };
 
 export const updateArea = (areaObj) => async (dispatch) => {
+  const {
+    id,
+    address,
+    city,
+    state,
+    zipcode,
+    description,
+    latitude,
+    longitude,
+  } = areaObj;
   const respone = await fetch(`/api/areas/${id}/edit`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({}),
+    body: JSON.stringify({
+      address,
+      city,
+      state,
+      zipcode,
+      description,
+      latitude,
+      longitude,
+    }),
   });
+
+  const area = await respone.json();
+  dispatch(updateOneArea(area));
+  return area;
+};
+
+export const deleteArea = (id) => async (dispatch) => {
+  const response = await fetch(`api/areas/delete/${id}`, {
+    method: "DELETE",
+  });
+  if (response.ok) {
+    dispatch(deleteOneArea(id));
+    return response;
+  }
+};
+
+const initialState = {};
+
+const areaReducer = (state = initialState, action) => {
+  let newState;
+  switch (action.type) {
+    case LOAD:
+      newState = Object.assign({}, state, { ...action.payload });
+      return newState;
+    case LOAD_ONE:
+      newState = Object.assign({}, state, { ...action.payload });
+      return newState;
+    case CREATE_AREA:
+      const new_area = action.payload.area;
+      const all_areas = state.all_areas;
+      newState = { all_areas: { ...all_areas, ...new_area } };
+      return newState;
+    case DELETE_AREA:
+      newState = Object.assign({}, state);
+      delete newState.all_areas[action.payload.id];
+      return newState;
+    default:
+      return state;
+  }
 };

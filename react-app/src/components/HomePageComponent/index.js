@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import AreaCreate from "../../AreaCreate";
 import { getAreas } from "../../store/area";
 import { getArea } from "../../store/area";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();
   const areas = useSelector((state) => state.areas.all_areas);
-  const singleArea = useSelector((state) => state.areas["1"]);
+  const singleArea = useSelector((state) => state.areas.area);
 
   useEffect(() => {
     dispatch(getAreas());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(getArea(1));
+    dispatch(getArea(2));
   }, [dispatch]);
 
   return (
@@ -26,8 +27,11 @@ const HomePageComponent = () => {
             <div>{area.description}</div>
           </div>
         ))}
-      <div> single area </div>
-      <div>{singleArea && singleArea.area.address}</div>
+      <div> ---- single area ---- </div>
+      <div>{singleArea && singleArea.latitude}</div>
+      <div>
+        <AreaCreate />
+      </div>
     </div>
   );
 };

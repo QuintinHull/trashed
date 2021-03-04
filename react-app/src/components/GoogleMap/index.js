@@ -7,18 +7,23 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-
-import "../../../public/simpleLogo.svg";
+import mapStyles from "./mapStyles";
+import { getAreas } from "../../store/area";
 
 const GoogleMapComponent = () => {
   const areas = useSelector((state) => state.areas.all_areas);
+  const dispatch = useDispatch();
   const [selectedArea, setSelectedArea] = useState(null);
+
+  useEffect(() => {
+    dispatch(getAreas());
+  }, [dispatch]);
 
   return (
     <GoogleMap
-      defaultZoom={7.5}
+      defaultZoom={8}
       defaultCenter={{ lat: 20.7984, lng: -156.3319 }}
-      //   defaultOptions={{ styles: mapStyles }}
+      defaultOptions={{ styles: mapStyles }}
     >
       {areas &&
         Object.values(areas).map((area) => (

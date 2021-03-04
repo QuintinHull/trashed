@@ -61,7 +61,7 @@ export const createArea = ({
   latitude,
   longitude,
 }) => async (dispatch) => {
-  const response = await fetch("/api/areas", {
+  const response = await fetch("/api/areas/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -137,12 +137,13 @@ const areaReducer = (state = initialState, action) => {
     case CREATE_AREA:
       const new_area = action.payload.area;
       let all_areas = state.all_areas;
-      newState = { all_areas: { ...all_areas, ...new_area } };
+      newState = { all_areas: { ...all_areas, [new_area.id]: new_area } };
       return newState;
     case UPDATE_AREA:
       const updatedArea = action.payload.area;
       all_areas = state.all_areas;
       newState = { all_areas: { ...all_areas, [updatedArea.id]: updatedArea } };
+      //   newState = Object.assign( {}, state, { ...all_areas, [updatedArea.id]: updatedArea } );
       return newState;
     case DELETE_AREA:
       newState = Object.assign({}, state);

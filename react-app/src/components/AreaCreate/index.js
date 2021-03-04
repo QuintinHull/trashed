@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { createArea } from "../../store/area";
 import Geocode from "react-geocode";
 import { useHistory } from "react-router-dom";
+import { getAreas } from "../../store/area";
 
 const AreaCreate = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const areas = useSelector((state) => state.areas.all_areas);
+  // const createdArea = useSelector((state) => state.areas.all_areas);
 
   const states = [
     "HI",
@@ -61,15 +64,66 @@ const AreaCreate = () => {
     "WY",
   ];
 
+  const apiKey = process.env.REACT_APP_GOOGLE_KEY;
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState(states[0]);
   const [zipcode, setZipcode] = useState("");
   const [description, setDescription] = useState("");
+  const [newArea, setNewArea] = useState("");
+
+  useEffect(() => {}, [newArea]);
+
+  Geocode.setApiKey(apiKey);
+  Geocode.setLanguage("en");
+  Geocode.setLocationType("ROOFTOP");
+
+  const getLat = (address, city, state, zipcode) => {
+    return Geocode.fromAddress(`${address} ${city}, ${state} ${zipcode}`).then(
+      (response) => {
+        const { lat } = response.results[0].geometry.location;
+        return lat;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  };
+
+  const getLng = (address, city, state, zipcode) => {
+    return Geocode.fromAddress(`${address} ${city}, ${state} ${zipcode}`).then(
+      (response) => {
+        const { lng } = response.results[0].geometry.location;
+        return lng;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const lat = await getLat(address, city, state, zipcode);
+    const lng = await getLng(address, city, state, zipcode);
+    const newArea = {
+      address,
+      city,
+      state,
+      zipcode,
+      description,
+      latitude: lat,
+      longitude: lng,
+    };
+
+    let addedArea = dispatch(createArea(newArea));
+    dispatch(getAreas());
+    setNewArea(addedArea);
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>address: </label>
         <input
           type="text"
@@ -80,7 +134,6 @@ const AreaCreate = () => {
         ></input>
         <label>city: </label>
         <input
-          className="area-create-input"
           type="text"
           required
           placeholder="Kailua"

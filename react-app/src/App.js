@@ -11,6 +11,7 @@ import { authenticate } from "./services/auth";
 import configureStore from "./store";
 
 import HomePage from "./components/HomePage";
+import AreaView from "./components/AreaView";
 
 const store = configureStore();
 
@@ -72,6 +73,14 @@ function App() {
               setShowLogin={setShowLogin}
               setShowSignUp={setShowSignUp}
             />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/area/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <AreaView />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

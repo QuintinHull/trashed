@@ -136,8 +136,13 @@ const areaReducer = (state = initialState, action) => {
       return newState;
     case CREATE_AREA:
       const new_area = action.payload.area;
-      const all_areas = state.all_areas;
+      let all_areas = state.all_areas;
       newState = { all_areas: { ...all_areas, ...new_area } };
+      return newState;
+    case UPDATE_AREA:
+      const updatedArea = action.payload.area;
+      all_areas = state.all_areas;
+      newState = { all_areas: { ...all_areas, [updatedArea.id]: updatedArea } };
       return newState;
     case DELETE_AREA:
       newState = Object.assign({}, state);
@@ -147,3 +152,5 @@ const areaReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default areaReducer;

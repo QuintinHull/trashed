@@ -11,6 +11,7 @@ area_routes = Blueprint("areas", __name__)
 def all_areas():
     areas = Area.query.all()
     return {"all_areas": {area.id: area.to_dict() for area in areas}}
+    
 @area_routes.route("/<id>")
 def single_area(id):
     area = Area.query.get(id)

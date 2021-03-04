@@ -10,7 +10,7 @@ import User from "./components/User";
 import { authenticate } from "./services/auth";
 import configureStore from "./store";
 
-import HomePageComponent from "./components/HomePageComponent";
+import HomePage from "./components/HomePage";
 
 const store = configureStore();
 
@@ -66,7 +66,7 @@ function App() {
             <User />
           </ProtectedRoute>
           <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-            <HomePageComponent
+            <HomePage
               authenticated={authenticated}
               setAuthenticated={setAuthenticated}
               setShowLogin={setShowLogin}

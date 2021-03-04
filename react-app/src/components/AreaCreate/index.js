@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createArea } from "../store/area";
+import { createArea } from "../../store/area";
 import Geocode from "react-geocode";
 import { useHistory } from "react-router-dom";
 

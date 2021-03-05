@@ -40,7 +40,7 @@ const deleteOneArea = (id) => {
 };
 
 export const getAreas = () => async (dispatch) => {
-  const response = await fetch("/api/areas");
+  const response = await fetch("/api/areas/");
   const areas = await response.json();
   return dispatch(getAllAreas(areas));
 };

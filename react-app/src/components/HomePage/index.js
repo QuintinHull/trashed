@@ -8,7 +8,7 @@ import { WrappedGoogleMap } from "../GoogleMap";
 const HomePageComponent = () => {
   const dispatch = useDispatch();
   const areas = useSelector((state) => state.areas.all_areas);
-  const singleArea = useSelector((state) => state.areas.area);
+  // const singleArea = useSelector((state) => state.areas.area);
   const apiKey = process.env.REACT_APP_GOOGLE_KEY;
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const HomePageComponent = () => {
             <div>{area.description}</div>
           </div>
         ))}
-      <div> ---- single area ---- </div>
-      <div>{singleArea && singleArea.latitude}</div>
+      {/* <div> ---- single area ---- </div> */}
+      {/* <div>{singleArea && singleArea.latitude}</div> */}
       <div>
         <AreaCreate />
       </div>

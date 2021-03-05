@@ -12,7 +12,7 @@ const AreaView = () => {
   //   console.log(singleArea);
   useEffect(() => {
     dispatch(getArea(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   const handleDelete = async () => {
     // const areaId = await id;

@@ -4,6 +4,7 @@ import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
 import { getArea } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
+import AreaView from "../AreaView";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();

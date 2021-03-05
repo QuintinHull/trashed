@@ -35,7 +35,7 @@ const GoogleMapComponent = () => {
             }}
             icon={{
               url: "/simpleLogo.svg",
-              scaledSize: new window.google.maps.Size(30, 30),
+              scaledSize: new window.google.maps.Size(35, 35),
             }}
           />
         ))}

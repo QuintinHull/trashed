@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
 import { getArea } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
-import AreaView from "../AreaView";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();

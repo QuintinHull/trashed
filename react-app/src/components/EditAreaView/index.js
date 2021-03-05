@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { createArea } from "../../store/area";
+import { useDispatch, useSelector } from "react-redux";
+import { getArea } from "../../store/area";
 import Geocode from "react-geocode";
-import { getAreas } from "../../store/area";
+import { updateArea } from "../../store/area";
+import { useParams } from "react-router-dom";
 
-const AreaCreate = () => {
+const EditAreaView = () => {
+  const { id } = useParams();
+  // console.log(id);
   const dispatch = useDispatch();
-  // const history = useHistory();
-  // const areas = useSelector((state) => state.areas.all_areas);
-  // const createdArea = useSelector((state) => state.areas.all_areas);
+  const singleArea = useSelector((state) => state.areas.area);
 
   const states = [
     "HI",
@@ -63,15 +64,19 @@ const AreaCreate = () => {
     "WY",
   ];
 
-  const apiKey = process.env.REACT_APP_GOOGLE_KEY;
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState(states[0]);
+  const [state, setState] = useState("");
   const [zipcode, setZipcode] = useState("");
   const [description, setDescription] = useState("");
-  const [newArea, setNewArea] = useState("");
+  const apiKey = process.env.REACT_APP_GOOGLE_KEY;
+  const [updatedArea, setUpdatedArea] = useState("");
 
-  useEffect(() => {}, [newArea]);
+  useEffect(() => {}, [updatedArea]);
+
+  useEffect(() => {
+    dispatch(getArea(id));
+  }, [dispatch, id]);
 
   Geocode.setApiKey(apiKey);
   Geocode.setLanguage("en");
@@ -101,11 +106,13 @@ const AreaCreate = () => {
     );
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, id) => {
     event.preventDefault();
     const lat = await getLat(address, city, state, zipcode);
     const lng = await getLng(address, city, state, zipcode);
-    const newArea = {
+    const areaId = await singleArea.id;
+    const updatedArea = {
+      id: areaId,
       address,
       city,
       state,
@@ -115,19 +122,19 @@ const AreaCreate = () => {
       longitude: lng,
     };
 
-    const addedArea = dispatch(createArea(newArea));
-    dispatch(getAreas());
-    setNewArea(addedArea);
+    const areaWithChange = dispatch(updateArea(updatedArea));
+    dispatch(getArea(id));
+    setUpdatedArea(areaWithChange);
   };
 
   return (
     <div>
+      <div> ---- edit area ---- </div>
       <form onSubmit={handleSubmit}>
         <label>address: </label>
         <input
           type="text"
           required
-          placeholder="265 Kaelepulu Dr"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         ></input>
@@ -160,10 +167,10 @@ const AreaCreate = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-        <button type="submit">trashed</button>
+        <button type="submit">update</button>
       </form>
     </div>
   );
 };
 
-export default AreaCreate;
+export default EditAreaView;

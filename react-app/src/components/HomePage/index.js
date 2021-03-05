@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
-import { getArea } from "../../store/area";
+// import { getArea } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
 
 const HomePageComponent = () => {
@@ -15,9 +15,9 @@ const HomePageComponent = () => {
     dispatch(getAreas());
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(getArea(2));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getArea(2));
+  // }, [dispatch]);
 
   return (
     <div className="body">

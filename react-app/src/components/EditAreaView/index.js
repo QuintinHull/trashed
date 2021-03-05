@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getArea } from "../../store/area";
 import Geocode from "react-geocode";
 import { updateArea } from "../../store/area";
 import { useParams } from "react-router-dom";
 
-const EditAreaView = () => {
+const EditAreaView = ({ singleArea }) => {
   const { id } = useParams();
   // console.log(id);
   const dispatch = useDispatch();
-  const singleArea = useSelector((state) => state.areas.area);
-
+  // const singleArea = useSelector((state) => state.areas.area);
+  console.log(singleArea);
   const states = [
     "HI",
     "AL",
@@ -64,13 +64,13 @@ const EditAreaView = () => {
     "WY",
   ];
 
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [zipcode, setZipcode] = useState("");
-  const [description, setDescription] = useState("");
-  const apiKey = process.env.REACT_APP_GOOGLE_KEY;
+  const [address, setAddress] = useState(singleArea?.address);
+  const [city, setCity] = useState(singleArea?.city);
+  const [state, setState] = useState(singleArea?.state);
+  const [zipcode, setZipcode] = useState(singleArea?.zipcode);
+  const [description, setDescription] = useState(singleArea?.description);
   const [updatedArea, setUpdatedArea] = useState("");
+  const apiKey = process.env.REACT_APP_GOOGLE_KEY;
 
   useEffect(() => {}, [updatedArea]);
 
@@ -106,7 +106,7 @@ const EditAreaView = () => {
     );
   };
 
-  const handleSubmit = async (event, id) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const lat = await getLat(address, city, state, zipcode);
     const lng = await getLng(address, city, state, zipcode);
@@ -121,11 +121,15 @@ const EditAreaView = () => {
       latitude: lat,
       longitude: lng,
     };
-
+    console.log(updatedArea);
     const areaWithChange = dispatch(updateArea(updatedArea));
-    dispatch(getArea(id));
+    dispatch(getArea(areaId));
     setUpdatedArea(areaWithChange);
   };
+
+  if (!singleArea) {
+    return null;
+  }
 
   return (
     <div>
@@ -135,6 +139,7 @@ const EditAreaView = () => {
         <input
           type="text"
           required
+          // defaultValue={singleArea.address}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         ></input>
@@ -142,7 +147,7 @@ const EditAreaView = () => {
         <input
           type="text"
           required
-          placeholder="Kailua"
+          // defaultValue={singleArea.city}
           value={city}
           onChange={(e) => setCity(e.target.value)}
         ></input>
@@ -155,15 +160,15 @@ const EditAreaView = () => {
         <label>zipcode: </label>
         <input
           type="number"
-          placeholder="96734"
+          // defaultValue={singleArea.zipcode}
           value={zipcode}
           onChange={(e) => setZipcode(e.target.value)}
         ></input>
         <label>description: </label>
         <textarea
-          placeholder="Tell us about this trashed area!"
           maxLength="250"
           type="text"
+          // defaultValue={singleArea.description}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>

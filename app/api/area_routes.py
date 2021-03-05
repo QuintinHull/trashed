@@ -1,5 +1,5 @@
 import datetime
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, Response
 from flask_login import current_user
 from app.models import db, Area
 from app.forms import AreaForm
@@ -63,10 +63,10 @@ def edit_location(id):
 @area_routes.route('/delete/<id>', methods=["DELETE"])
 def delete_area(id):
     area = Area.query.get(id)
-    print("------>", area)
+    print("---area--->", area)
     db.session.delete(area)
     db.session.commit()
-    return {"area": area.to_dict()}
+    return {'area': area.to_dict()}
 
         
 

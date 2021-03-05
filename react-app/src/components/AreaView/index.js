@@ -12,23 +12,24 @@ const AreaView = () => {
   //   console.log(singleArea);
   useEffect(() => {
     dispatch(getArea(id));
-  }, [dispatch, id]);
+  }, [dispatch]);
 
-  const handleDelete = async (id) => {
-    const areaId = await id;
-    dispatch(deleteArea(areaId));
+  const handleDelete = async () => {
+    // const areaId = await id;
+    console.log("---id--->", id);
+    dispatch(deleteArea(id));
     history.push(`/`);
   };
 
   return (
     <div>
-      <div> ---- single area ---- </div>
+      <div> ---- area view ---- </div>
       <div>{singleArea && singleArea.address}</div>
       <div>{singleArea && singleArea.city}</div>
       <div>{singleArea && singleArea.state}</div>
       <div>{singleArea && singleArea.zipcode}</div>
       <div>{singleArea && singleArea.description}</div>
-      <EditAreaView />
+      {singleArea && <EditAreaView singleArea={singleArea} />}
       <div> ---- delete area ---- </div>
       <button onClick={() => handleDelete(singleArea.id)}>remove</button>
     </div>

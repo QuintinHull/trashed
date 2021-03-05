@@ -114,13 +114,11 @@ export const updateArea = (areaObj) => async (dispatch) => {
 };
 
 export const deleteArea = (id) => async (dispatch) => {
-  const response = await fetch(`api/areas/delete/${id}`, {
+  const response = await fetch(`/api/areas/delete/${id}`, {
     method: "DELETE",
   });
-  if (response.ok) {
-    dispatch(deleteOneArea(id));
-    return response;
-  }
+  dispatch(deleteOneArea(id));
+  return response;
 };
 
 const initialState = {};
@@ -143,8 +141,9 @@ const areaReducer = (state = initialState, action) => {
     case UPDATE_AREA:
       const updatedArea = action.payload.area;
       all_areas = state.all_areas;
-      newState = { all_areas: { ...all_areas, [updatedArea.id]: updatedArea } };
+      // newState = { area: { [updatedArea.id]: updatedArea } };
       //   newState = Object.assign( {}, state, { ...all_areas, [updatedArea.id]: updatedArea } );
+      newState = { area: updatedArea };
       return newState;
     case DELETE_AREA:
       newState = Object.assign({}, state);

@@ -19,6 +19,8 @@ const GoogleMapComponent = () => {
     dispatch(getAreas());
   }, [dispatch]);
 
+  const iconPath = process.env.NODE_ENV === "production" ? "/static" : "";
+
   return (
     <GoogleMap
       defaultZoom={8}
@@ -34,7 +36,7 @@ const GoogleMapComponent = () => {
               setSelectedArea(area);
             }}
             icon={{
-              url: "/simpleLogo.svg",
+              url: `${iconPath}/simpleLogo.svg`,
               scaledSize: new window.google.maps.Size(35, 35),
             }}
           />

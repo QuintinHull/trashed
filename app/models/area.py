@@ -16,8 +16,8 @@ class Area(db.Model):
     created_at = db.Column(db.DateTime, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
-    user = db.relationship("User", cascade="all, delete", backref="areas")
-    event = db.relationship("Event", cascade="all, delete", backref="areas")
+    area_user = db.relationship("User", back_populates="user_area")
+    area_event = db.relationship("Event", back_populates="event_area")
 
     def to_dict(self):
         return {

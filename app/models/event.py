@@ -11,8 +11,8 @@ class Event(db.Model):
     area_id = db.Column(db.Integer, db.ForeignKey("areas.id"), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
-    area = db.relationship("Area", cascade="all, delete", backref="events")
-    user = db.relationship("User", cascade="all, delete", backref="events")
+    event_area = db.relationship("Area", back_populates="area_event")
+    event_user = db.relationship("User", back_populates="user_event")
 
     def to_dict(self):
         return {

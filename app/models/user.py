@@ -13,9 +13,9 @@ class User(db.Model, UserMixin):
   hashed_password = db.Column(db.String(255), nullable=False)
 
   # relationships here
-  area = db.relationship("Area", cascade="all, delete", backref="users")
-  event = db.relationship("Event", cascade="all, delete", backref="users")
-  item = db.relationship("Item", cascade="all, delete", backref="users")
+  user_area = db.relationship("Area", back_populates="area_user")
+  user_event = db.relationship("Event", back_populates="event_user")
+  user_item = db.relationship("Item", back_populates="item_user")
 
   @property
   def password(self):

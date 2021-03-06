@@ -9,8 +9,8 @@ class Item(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     type_id = db.Column(db.Integer, db.ForeignKey("types.id"), nullable=False)
 
-    user = db.relationship("User", cascade="all, delete", backref="items")
-    item_type = db.relationship("Type", cascade="all, delete", backref="items")
+    item_user = db.relationship("User", back_populates="user_item")
+    item_type = db.relationship("Type", back_populates="type_item")
 
     def to_dict(self):
         return {

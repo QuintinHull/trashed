@@ -9,14 +9,12 @@ const AreaView = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const singleArea = useSelector((state) => state.areas.area);
-  //   console.log(singleArea);
+
   useEffect(() => {
     dispatch(getArea(id));
   }, [dispatch, id]);
 
   const handleDelete = async () => {
-    // const areaId = await id;
-    console.log("---id--->", id);
     dispatch(deleteArea(id));
     history.push(`/`);
   };

@@ -44,18 +44,15 @@ def edit_location(id):
     area = Area.query.get(id)
 
     new_area = request.get_json()
-    # print("------->", new_area)
+   
     area.address = new_area["address"]
     area.city = new_area["city"]
     area.state = new_area["state"]
     area.zipcode = new_area["zipcode"]
     area.description = new_area["description"]
-    # area = new_area["clean"]
     area.latitude = new_area["latitude"]
     area.longitude = new_area["longitude"]
-    # area = new_area["created_at"]
-    # area = new_area["user_id"]
-
+    
     db.session.commit()
     return {"area": area.to_dict()}
 
@@ -63,7 +60,6 @@ def edit_location(id):
 @area_routes.route('/delete/<id>', methods=["DELETE"])
 def delete_area(id):
     area = Area.query.get(id)
-    print("---area--->", area)
     db.session.delete(area)
     db.session.commit()
     return {'area': area.to_dict()}

@@ -6,9 +6,6 @@ import { getAreas } from "../../store/area";
 
 const AreaCreate = () => {
   const dispatch = useDispatch();
-  // const history = useHistory();
-  // const areas = useSelector((state) => state.areas.all_areas);
-  // const createdArea = useSelector((state) => state.areas.all_areas);
 
   const states = [
     "HI",

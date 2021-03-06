@@ -7,10 +7,8 @@ import { useParams } from "react-router-dom";
 
 const EditAreaView = ({ singleArea }) => {
   const { id } = useParams();
-  // console.log(id);
   const dispatch = useDispatch();
-  // const singleArea = useSelector((state) => state.areas.area);
-  console.log(singleArea);
+
   const states = [
     "HI",
     "AL",
@@ -139,7 +137,6 @@ const EditAreaView = ({ singleArea }) => {
         <input
           type="text"
           required
-          // defaultValue={singleArea.address}
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         ></input>
@@ -147,7 +144,6 @@ const EditAreaView = ({ singleArea }) => {
         <input
           type="text"
           required
-          // defaultValue={singleArea.city}
           value={city}
           onChange={(e) => setCity(e.target.value)}
         ></input>
@@ -160,7 +156,6 @@ const EditAreaView = ({ singleArea }) => {
         <label>zipcode: </label>
         <input
           type="number"
-          // defaultValue={singleArea.zipcode}
           value={zipcode}
           onChange={(e) => setZipcode(e.target.value)}
         ></input>
@@ -168,7 +163,6 @@ const EditAreaView = ({ singleArea }) => {
         <textarea
           maxLength="250"
           type="text"
-          // defaultValue={singleArea.description}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>

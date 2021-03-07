@@ -12,6 +12,11 @@ def all_events():
     events = Event.query.all()
     return {"all_events": {event.id: event.to_dict() for event in events}}
 
+@event_routes.route("/area/<id>")
+def events_for_area(id):
+    events = Event.query.filter(Event.area_id == id).all()    
+    return {"all_area_events": {event.id: event.to_dict() for event in events}}
+
 
 @event_routes.route("/<id>")
 def single_event(id):

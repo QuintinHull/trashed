@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { deleteArea, getArea } from "../../store/area";
 import EditAreaView from "../EditAreaView";
+import EventCreate from "../EventCreate";
+import AreaEventView from "../AreaEventView";
 
 const AreaView = () => {
   const { id } = useParams();
@@ -28,6 +30,10 @@ const AreaView = () => {
       <div>{singleArea && singleArea.zipcode}</div>
       <div>{singleArea && singleArea.description}</div>
       {singleArea && <EditAreaView singleArea={singleArea} />}
+      {singleArea && <AreaEventView singleArea={singleArea} />}
+      <div>
+        <EventCreate />
+      </div>
       <div> ---- delete area ---- </div>
       <button onClick={() => handleDelete(singleArea.id)}>remove</button>
     </div>

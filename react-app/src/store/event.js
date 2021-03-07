@@ -1,4 +1,5 @@
 const LOAD = "event/getAllEvents";
+const LOAD_AREA_EVENT = "event/getAllAreaEvents";
 const LOAD_ONE = "event/getOneEvent";
 const CREATE_EVENT = "event/createEvent";
 const UPDATE_EVENT = "event/updateEvent";
@@ -15,6 +16,13 @@ const getOneEvent = (event) => {
   return {
     type: LOAD_ONE,
     payload: event,
+  };
+};
+
+const getAllAreaEvents = (events) => {
+  return {
+    type: LOAD_AREA_EVENT,
+    payload: events,
   };
 };
 
@@ -50,6 +58,12 @@ export const getEvent = (id) => async (dispatch) => {
   const event = await response.json();
   dispatch(getOneEvent(event));
   return event;
+};
+
+export const getAreaEvents = (id) => async (dispatch) => {
+  const response = await fetch(`/api/events/area/${id}`);
+  const events = await response.json();
+  return dispatch(getAllAreaEvents(events));
 };
 
 export const createEvent = ({
@@ -111,6 +125,9 @@ const eventReducer = (state = initialState, action) => {
       newState = Object.assign({}, state, { ...action.payload });
       return newState;
     case LOAD_ONE:
+      newState = Object.assign({}, state, { ...action.payload });
+      return newState;
+    case LOAD_AREA_EVENT:
       newState = Object.assign({}, state, { ...action.payload });
       return newState;
     case CREATE_EVENT:

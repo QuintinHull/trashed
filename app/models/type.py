@@ -7,7 +7,7 @@ class Type(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
 
-    item = db.relationship("Item", cascade="all, delete", backref="types")
+    type_item = db.relationship("Item", back_populates="item_type")
 
     def to_dict(self):
         return {

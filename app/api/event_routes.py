@@ -4,7 +4,7 @@ from app.models import db, Event
 from app.forms import EventForm
 from sqlalchemy import and_
 
-event_routes = BluePrint("events", __name__)
+event_routes = Blueprint("events", __name__)
 
 
 @event_routes.route("/")

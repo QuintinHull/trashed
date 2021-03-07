@@ -12,6 +12,7 @@ import configureStore from "./store";
 
 import HomePage from "./components/HomePage";
 import AreaView from "./components/AreaView";
+import EventView from "./components/EventView";
 
 const store = configureStore();
 
@@ -81,6 +82,14 @@ function App() {
             setShowSignUp={setShowSignUp}
           >
             <AreaView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/event/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <EventView />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

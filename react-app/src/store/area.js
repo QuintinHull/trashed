@@ -92,7 +92,7 @@ export const updateArea = (areaObj) => async (dispatch) => {
     latitude,
     longitude,
   } = areaObj;
-  const respone = await fetch(`/api/areas/${id}/edit`, {
+  const response = await fetch(`/api/areas/${id}/edit`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const updateArea = (areaObj) => async (dispatch) => {
     }),
   });
 
-  const area = await respone.json();
+  const area = await response.json();
   dispatch(updateOneArea(area));
   return area;
 };
@@ -149,7 +149,7 @@ const areaReducer = (state = initialState, action) => {
       // newState = Object.assign({}, state);
       // delete newState.all_areas[action.payload.id];
       newState = Object.assign({}, state);
-      console.log("-------->", newState);
+      // console.log("-------->", newState);
       delete newState.area;
       return newState;
     default:

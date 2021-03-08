@@ -20,7 +20,8 @@ class Event(db.Model):
             "title": self.title,
             "date_time": self.date_time,
             "description": self.description,
-            "area_id": self.area_id
+            "area_id": self.area_id,
+            "user_id": self.user_id
         }
 
 

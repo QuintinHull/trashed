@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getArea } from "../../store/area";
+import { getAreaEvents } from "../../store/event";
 import { createEvent } from "../../store/event";
 import { getEvents } from "../../store/event";
 
@@ -17,7 +17,7 @@ const EventCreate = () => {
   useEffect(() => {}, [newEvent]);
 
   useEffect(() => {
-    dispatch(getArea(id));
+    dispatch(getAreaEvents(id));
   }, [dispatch, id]);
 
   const handleSubmit = async (event) => {
@@ -61,7 +61,7 @@ const EventCreate = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-        <button type="submit">update</button>
+        <button type="submit">create event</button>
       </form>
     </div>
   );

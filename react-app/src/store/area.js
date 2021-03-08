@@ -3,6 +3,7 @@ const LOAD_ONE = "area/getOneArea";
 const CREATE_AREA = "area/createArea";
 const UPDATE_AREA = "area/updateArea";
 const DELETE_AREA = "area/deleteArea";
+const SEARCH_AREA = "area/searchArea";
 
 const getAllAreas = (areas) => {
   return {
@@ -36,6 +37,13 @@ const deleteOneArea = (id) => {
   return {
     type: DELETE_AREA,
     payload: id,
+  };
+};
+
+const getSearchedAreas = (areas) => {
+  return {
+    type: LOAD,
+    payload: areas,
   };
 };
 
@@ -121,6 +129,12 @@ export const deleteArea = (id) => async (dispatch) => {
   return response;
 };
 
+export const searchAreas = (city) => async (dispatch) => {
+  const response = await fetch(`/api/areas/search/${city}`);
+  const areas = await response.json();
+  return dispatch(getSearchedAreas(areas));
+};
+
 const initialState = {};
 
 const areaReducer = (state = initialState, action) => {
@@ -151,6 +165,9 @@ const areaReducer = (state = initialState, action) => {
       newState = Object.assign({}, state);
       // console.log("-------->", newState);
       delete newState.area;
+      return newState;
+    case SEARCH_AREA:
+      newState = Object.assign({}, state, { ...action.payload });
       return newState;
     default:
       return state;

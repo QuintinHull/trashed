@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
+import CalendarView from "../CalendarView";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,9 @@ const HomePageComponent = () => {
 
   return (
     <div className="body">
+      <div>
+        <CalendarView />
+      </div>
       {areas &&
         Object.values(areas).map((area) => (
           <div key={area.id}>

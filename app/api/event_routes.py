@@ -24,18 +24,24 @@ def single_event(id):
     return {"event": event.to_dict()}
 
 
-@event_routes.route("/<id>", methods=["POST"])
-def create_event(id):
+@event_routes.route("/<areaId>", methods=["POST"])
+def create_event(areaId):
     form = EventForm()
+    print("---------------form title------->", form.data['title'])
+    print("---------------form datetime------->", form.data['date_time'])
+    print("---------------form desc------->", form.data['description'])
+    print("---------------form areaId------->", areaId)
+    print("---------------form current user------->", current_user.id)
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         event = Event(
             title=form.data['title'],
             date_time=form.data['date_time'],
             description=form.data['description'],
-            area_id=id,
+            area_id=areaId,
             user_id=current_user.id,   
         )
+        print("---event route, event--->", event)
         db.session.add(event)
         db.session.commit()
         return {"event": event.to_dict()}

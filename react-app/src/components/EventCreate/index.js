@@ -5,7 +5,7 @@ import { getAreaEvents } from "../../store/event";
 import { createEvent } from "../../store/event";
 import { getEvents } from "../../store/event";
 
-const EventCreate = () => {
+const EventCreate = ({ singleArea }) => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -15,10 +15,10 @@ const EventCreate = () => {
   const [newEvent, setNewEvent] = useState("");
 
   useEffect(() => {}, [newEvent]);
-
+  console.log(singleArea.id);
   useEffect(() => {
-    dispatch(getAreaEvents(id));
-  }, [dispatch, id]);
+    dispatch(getAreaEvents(singleArea?.id));
+  }, [dispatch]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

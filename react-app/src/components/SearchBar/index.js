@@ -8,15 +8,14 @@ const SearchBar = () => {
   const history = useHistory();
   const [city, setCity] = useState("");
 
-  //   useEffect(() => {
-  //     dispatch(getAreas());
-  //   }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getAreas());
+  // }, [dispatch]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(searchAreas(city));
     history.push(`/locate?city=${city}`);
-    // return history.push(`/search/${city}`);
   };
 
   return (

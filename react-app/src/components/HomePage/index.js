@@ -16,9 +16,6 @@ const HomePageComponent = () => {
 
   return (
     <div className="body">
-      <div>
-        <CalendarView />
-      </div>
       {areas &&
         Object.values(areas).map((area) => (
           <div key={area.id}>

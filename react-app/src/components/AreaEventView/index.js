@@ -6,6 +6,8 @@ const AreaEventView = ({ singleArea }) => {
   const dispatch = useDispatch();
   const areaEvents = useSelector((state) => state.events.all_area_events);
 
+  console.log(singleArea.id);
+
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));
   }, [dispatch]);

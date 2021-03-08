@@ -6,40 +6,38 @@ import { searchAreas } from "../../store/area";
 
 const SearchResult = () => {
   const dispatch = useDispatch();
-  // const { city } = useParams();
-  //   const location = useLocation();
   const { search } = useLocation();
   const { city } = queryString.parse(search);
-  //   console.log(city);
-  console.log(city);
+  const searchedAreas = useSelector((state) => state.areas.searched_areas);
 
-  // const searchedAreas = useSelector((state) => state.areas.searched_areas);
+  useEffect(() => {
+    dispatch(searchAreas(city));
+  }, [dispatch, city]);
 
-  //   useEffect(() => {
-  //     dispatch(searchAreas(city));
-  //   }, [dispatch, city]);
-
-  // const handleSearch = (searchedAreas) => {
-  //   let area_obj = [];
-  //   for (let area in searchedAreas) {
-  //     area_obj.push(searchAreas[area]);
-  //   }
-  //   return area_obj.map((area) => (
-  //     <div key={area.id}>
-  //       <div>{area.id}</div>
-  //       <div>{area.address}</div>
-  //       <div>{area.description}</div>
-  //     </div>
-  //   ));
-  // };
+  const handleSearch = (searchedAreas) => {
+    let area_array = [];
+    for (let area in searchedAreas) {
+      area_array.push(searchedAreas[area]);
+    }
+    return area_array.map((area) => (
+      <div key={area && area.id}>
+        <div>{area && area.id}</div>
+        <div>{area && area.address}</div>
+        <div>{area && area.description}</div>
+      </div>
+    ));
+  };
 
   return (
     <div>
-      <div>----search results----</div>
+      <div>
+        ----{searchedAreas && searchedAreas.length} search results for '{city}
+        '----
+      </div>
 
       <div className="search-results-container">
-        {/* {searchedAreas && searchedAreas.length === 0 && <div>no results</div>}
-        {handleSearch(searchedAreas)} */}
+        {searchedAreas && searchedAreas.length === 0 && <div>no results</div>}
+        {searchedAreas && handleSearch(searchedAreas)}
       </div>
     </div>
   );

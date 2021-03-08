@@ -17,7 +17,7 @@ const EventView = () => {
 
   const handleDelete = async () => {
     dispatch(deleteEvent(id));
-    history.push(`/`);
+    history.push(`/area/${singleEvent?.area_id}`);
   };
 
   return (

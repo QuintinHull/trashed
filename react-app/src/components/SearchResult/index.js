@@ -13,25 +13,25 @@ const SearchResult = () => {
   //   console.log(city);
   console.log(city);
 
-  const searchedAreas = useSelector((state) => state.areas.searched_areas);
+  // const searchedAreas = useSelector((state) => state.areas.searched_areas);
 
   //   useEffect(() => {
   //     dispatch(searchAreas(city));
   //   }, [dispatch, city]);
 
-  const handleSearch = (searchedAreas) => {
-    let area_obj = [];
-    for (let area in searchedAreas) {
-      area_obj.push(searchAreas[area]);
-    }
-    return area_obj.map((area) => (
-      <div key={area.id}>
-        <div>{area.id}</div>
-        <div>{area.address}</div>
-        <div>{area.description}</div>
-      </div>
-    ));
-  };
+  // const handleSearch = (searchedAreas) => {
+  //   let area_obj = [];
+  //   for (let area in searchedAreas) {
+  //     area_obj.push(searchAreas[area]);
+  //   }
+  //   return area_obj.map((area) => (
+  //     <div key={area.id}>
+  //       <div>{area.id}</div>
+  //       <div>{area.address}</div>
+  //       <div>{area.description}</div>
+  //     </div>
+  //   ));
+  // };
 
   return (
     <div>

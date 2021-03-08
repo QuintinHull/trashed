@@ -6,5 +6,5 @@ from app.models import Event
 
 class EventForm(FlaskForm):
     title = StringField("title", validators=[DataRequired()])
-    date_time = DateTimeLocalField("date_time", validators=[DataRequired()])
+    date_time = DateTimeLocalField("date_time", validators=[DataRequired()], format="%Y-%m-%dT%H:%M")
     description = TextAreaField("description", validators=[DataRequired()])

@@ -13,8 +13,9 @@ const SearchBar = () => {
   //   }, [dispatch]);
 
   const handleSearch = (e) => {
+    e.preventDefault();
     dispatch(searchAreas(city));
-    return history.push(`/locate?city=${city}`);
+    history.push(`/locate?city=${city}`);
     // return history.push(`/search/${city}`);
   };
 

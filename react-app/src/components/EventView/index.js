@@ -20,10 +20,6 @@ const EventView = () => {
     history.push(`/`);
   };
 
-  if (!singleEvent) {
-    return null;
-  }
-
   return (
     <div>
       <div> ---- single event view ---- </div>

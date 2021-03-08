@@ -73,7 +73,7 @@ export const createEvent = ({
   areaId,
 }) => async (dispatch) => {
   console.log("title", title);
-  console.log("date_time", date_time);
+  console.log("date_time", typeof date_time);
   console.log("description", description);
   console.log("areaId", areaId);
   const response = await fetch(`/api/events/${areaId}`, {

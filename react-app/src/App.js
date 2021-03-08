@@ -13,6 +13,7 @@ import configureStore from "./store";
 import HomePage from "./components/HomePage";
 import AreaView from "./components/AreaView";
 import EventView from "./components/EventView";
+import SearchResult from "./components/SearchResult";
 
 const store = configureStore();
 
@@ -90,6 +91,14 @@ function App() {
             setShowSignUp={setShowSignUp}
           >
             <EventView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/locate"
+            // path="/search"
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <SearchResult />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

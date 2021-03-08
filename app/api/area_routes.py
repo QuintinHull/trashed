@@ -64,5 +64,12 @@ def delete_area(id):
     db.session.commit()
     return {'area': area.to_dict()}
 
+
+@area_routes.route('/search/<city>')
+def search_areas(city):
+    areas = Area.query.filter(Area.city.ilike(f'{city}%'))
+    return {"searched_areas": [area.to_dict() for area in areas]}
+
+
         
 

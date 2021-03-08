@@ -1,32 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { getAreas, searchAreas } from "../../store/area";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
 
-  const areas = useSelector((state) => state.spots.all_areas);
+  //   useEffect(() => {
+  //     dispatch(getAreas());
+  //   }, [dispatch]);
 
-  const updateLocation = (event) => setLocation(event.target.value);
-
-  useEffect(() => {
-    dispatch(getAreas());
-  }, [dispatch]);
-
-  const executeSearch = (e) => {
-    dispatch(searchAreas(location));
-    return history.push(`/locate?city=${location}`);
+  const handleSearch = (e) => {
+    dispatch(searchAreas(city));
+    return history.push(`/locate?city=${city}`);
+    // return history.push(`/search/${city}`);
   };
 
   return (
     <div>
-      <form onSubmit={executeSearch}>
-        <label>search for trash</label>
-        <input value={location} onChange={updateLocation}></input>
-        <button type="submit">search</button>
+      <form>
+        <input
+          type="text"
+          className="search"
+          placeholder="search by city..."
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <button type="submit" className="search__button" onClick={handleSearch}>
+          go
+        </button>
       </form>
     </div>
   );

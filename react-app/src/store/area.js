@@ -42,7 +42,7 @@ const deleteOneArea = (id) => {
 
 const getSearchedAreas = (areas) => {
   return {
-    type: LOAD,
+    type: SEARCH_AREA,
     payload: areas,
   };
 };

@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import areaReducer from "./area";
 import eventReducer from "./event";
+import typeReducer from "./type";
 
 const rootReducer = combineReducers({
   areas: areaReducer,

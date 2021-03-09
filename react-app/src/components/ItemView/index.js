@@ -10,6 +10,9 @@ const ItemView = () => {
   const dispatch = useDispatch();
 
   const typeItems = useSelector((state) => state.items.all_type_items);
+  // const creator = useSelector((state) => state.session.user);
+
+  // useEffect(() => {}, [creator]);
 
   useEffect(() => {
     dispatch(getTypeItems(id));

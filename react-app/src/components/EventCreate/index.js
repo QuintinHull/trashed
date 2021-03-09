@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getAreaEvents } from "../../store/event";
 import { createEvent } from "../../store/event";
-import { getEvents } from "../../store/event";
 
 const EventCreate = ({ singleArea }) => {
   const { id } = useParams();
@@ -15,14 +14,9 @@ const EventCreate = ({ singleArea }) => {
   const [newEvent, setNewEvent] = useState("");
 
   useEffect(() => {}, [newEvent]);
-  // console.log(singleArea.id);
-  useEffect(() => {
-    dispatch(getAreaEvents(singleArea?.id));
-  }, [dispatch]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     const newEvent = {
       title,
       date_time: dateTime,
@@ -31,8 +25,8 @@ const EventCreate = ({ singleArea }) => {
     };
 
     const addedEvent = dispatch(createEvent(newEvent));
-    dispatch(getEvents());
     setNewEvent(addedEvent);
+    dispatch(getAreaEvents(singleArea?.id));
   };
 
   return (

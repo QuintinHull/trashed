@@ -11,6 +11,7 @@ const AreaView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const history = useHistory();
+
   const singleArea = useSelector((state) => state.areas.area);
   const areaEvents = useSelector((state) => state.events.all_area_events);
 

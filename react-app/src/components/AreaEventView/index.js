@@ -4,13 +4,13 @@ import { getAreaEvents } from "../../store/event";
 
 const AreaEventView = ({ singleArea }) => {
   const dispatch = useDispatch();
-  const areaEvents = useSelector((state) => state.events.all_area_events);
-
   // console.log(singleArea.id);
+
+  const areaEvents = useSelector((state) => state.events.all_area_events);
 
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));
-  }, [dispatch]);
+  }, [dispatch, areaEvents]);
 
   return (
     <div>

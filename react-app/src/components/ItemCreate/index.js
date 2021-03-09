@@ -22,8 +22,8 @@ const ItemCreate = () => {
     };
 
     const addedItem = dispatch(createItem(newItem));
-    dispatch(getTypeItems(id));
     setNewItem(addedItem);
+    dispatch(getTypeItems(id));
   };
 
   return (

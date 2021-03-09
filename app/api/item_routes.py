@@ -7,8 +7,8 @@ item_routes = Blueprint("items", __name__)
 
 @item_routes.route("/")
 def all_items():
-    items = Type.query.all()
-    return {"all_types": {item.id: item.to_dict() for item in items}}
+    items = Item.query.all()
+    return {"all_items": {item.id: item.to_dict() for item in items}}
 
 @item_routes.route("/area/<id>")
 def items_for_type(id):

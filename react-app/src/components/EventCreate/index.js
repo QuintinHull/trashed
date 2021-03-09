@@ -15,7 +15,7 @@ const EventCreate = ({ singleArea }) => {
   const [newEvent, setNewEvent] = useState("");
 
   useEffect(() => {}, [newEvent]);
-  console.log(singleArea.id);
+  // console.log(singleArea.id);
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));
   }, [dispatch]);

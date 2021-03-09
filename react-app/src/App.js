@@ -14,6 +14,8 @@ import HomePage from "./components/HomePage";
 import AreaView from "./components/AreaView";
 import EventView from "./components/EventView";
 import SearchResult from "./components/SearchResult";
+import ItemView from "./components/ItemView";
+import TypeView from "./components/TypeView";
 
 const store = configureStore();
 
@@ -94,11 +96,26 @@ function App() {
           </ProtectedRoute>
           <ProtectedRoute
             path="/locate"
-            // path="/search"
             authenticated={authenticated}
             setShowSignUp={setShowSignUp}
           >
             <SearchResult />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/type"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <TypeView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/type/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <ItemView />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

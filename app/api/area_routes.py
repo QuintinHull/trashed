@@ -67,7 +67,6 @@ def delete_area(id):
 
 @area_routes.route('/search/<city>')
 def search_areas(city):
-    print("-----route---->", city)
     areas = Area.query.filter(Area.city.ilike(f'%{city}%'))
     return {"searched_areas": [area.to_dict() for area in areas]}
 

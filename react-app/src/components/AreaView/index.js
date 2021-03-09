@@ -14,7 +14,7 @@ const AreaView = () => {
   const singleArea = useSelector((state) => state.areas.area);
   const areaEvents = useSelector((state) => state.events.all_area_events);
 
-  console.log(singleArea?.id);
+  // console.log(singleArea?.id);
 
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));

@@ -3,10 +3,13 @@ import thunk from "redux-thunk";
 import areaReducer from "./area";
 import eventReducer from "./event";
 import typeReducer from "./type";
+import itemReducer from "./item";
 
 const rootReducer = combineReducers({
   areas: areaReducer,
   events: eventReducer,
+  types: typeReducer,
+  items: itemReducer,
 });
 
 let enhancer;

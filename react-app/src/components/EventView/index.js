@@ -9,7 +9,7 @@ const EventView = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const singleEvent = useSelector((state) => state.events.event);
-  console.log(singleEvent);
+  // console.log(singleEvent);
 
   useEffect(() => {
     dispatch(getEvent(id));

@@ -130,7 +130,6 @@ export const deleteArea = (id) => async (dispatch) => {
 };
 
 export const searchAreas = (city) => async (dispatch) => {
-  console.log("thunk", city);
   const response = await fetch(`/api/areas/search/${city}`);
   const areas = await response.json();
   return dispatch(getSearchedAreas(areas));

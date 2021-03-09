@@ -12,6 +12,11 @@ import configureStore from "./store";
 
 import HomePage from "./components/HomePage";
 import AreaView from "./components/AreaView";
+import EventView from "./components/EventView";
+import SearchResult from "./components/SearchResult";
+import ItemView from "./components/ItemView";
+import TypeView from "./components/TypeView";
+import SingleItemView from "./components/SingleItemView";
 
 const store = configureStore();
 
@@ -81,6 +86,45 @@ function App() {
             setShowSignUp={setShowSignUp}
           >
             <AreaView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/event/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <EventView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/locate"
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <SearchResult />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/type"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <TypeView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/type/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <ItemView />
+          </ProtectedRoute>
+          <ProtectedRoute
+            path="/item/:id"
+            exact={true}
+            authenticated={authenticated}
+            setShowSignUp={setShowSignUp}
+          >
+            <SingleItemView />
           </ProtectedRoute>
         </Switch>
       </BrowserRouter>

@@ -20,7 +20,12 @@ class Event(db.Model):
             "title": self.title,
             "date_time": self.date_time,
             "description": self.description,
-            "area_id": self.area_id
+            "area_id": self.area_id,
+            "user_id": self.user_id,
+            "area_address": self.event_area.address,
+            "area_state": self.event_area.state,
+            "first_name": self.event_user.first_name,
+            "last_name": self.event_user.last_name
         }
 
 

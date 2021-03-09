@@ -1,6 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import LogoutButton from "./auth/LogoutButton";
+import SearchBar from "./SearchBar";
 
 const NavBar = ({ setAuthenticated }) => {
   return (
@@ -10,6 +11,9 @@ const NavBar = ({ setAuthenticated }) => {
           <NavLink to="/" exact={true} activeClassName="active">
             Home
           </NavLink>
+        </li>
+        <li>
+          <SearchBar />
         </li>
         <li>
           <NavLink to="/login" exact={true} activeClassName="active">
@@ -32,6 +36,6 @@ const NavBar = ({ setAuthenticated }) => {
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;

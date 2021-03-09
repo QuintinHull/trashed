@@ -5,11 +5,11 @@ function User() {
   const [user, setUser] = useState({});
   // Notice we use useParams here instead of getting the params
   // From props.
-  const { userId }  = useParams();
+  const { userId } = useParams();
 
   useEffect(() => {
     if (!userId) {
-      return
+      return;
     }
     (async () => {
       const response = await fetch(`/api/users/${userId}`);
@@ -28,7 +28,10 @@ function User() {
         <strong>User Id</strong> {userId}
       </li>
       <li>
-        <strong>Username</strong> {user.username}
+        <strong>First Name</strong> {user.first_name}
+      </li>
+      <li>
+        <strong>Last Name</strong> {user.last_name}
       </li>
       <li>
         <strong>Email</strong> {user.email}

@@ -31,5 +31,7 @@ class Area(db.Model):
             "latitude": self.latitude,
             "longitude": self.longitude,
             "created_at": self.created_at,
-            "user_id": self.user_id 
+            "user_id": self.user_id,
+            "first_name": self.area_user.first_name,
+            "last_name": self.area_user.last_name
         }

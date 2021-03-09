@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
-import CalendarView from "../CalendarView";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();

@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTypeItems } from "../../store/item";
 import ItemCreate from "../ItemCreate";
 import EditItemView from "../EditItemView";
-import { NavLink, useHistory, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 const ItemView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const history = useHistory();
+
   const typeItems = useSelector((state) => state.items.all_type_items);
 
   useEffect(() => {

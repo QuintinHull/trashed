@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { createItem, getItems } from "../../store/item";
+import { createItem, getTypeItems } from "../../store/item";
 import { useParams } from "react-router-dom";
 
 const ItemCreate = () => {
@@ -15,7 +15,6 @@ const ItemCreate = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     const newItem = {
       name,
       description,
@@ -23,7 +22,7 @@ const ItemCreate = () => {
     };
 
     const addedItem = dispatch(createItem(newItem));
-    dispatch(getItems());
+    dispatch(getTypeItems(id));
     setNewItem(addedItem);
   };
 

@@ -25,8 +25,10 @@ const EventCreate = ({ singleArea }) => {
     };
 
     const addedEvent = dispatch(createEvent(newEvent));
+    console.log("added event", addedEvent);
+    console.log(singleArea);
     setNewEvent(addedEvent);
-    dispatch(getAreaEvents(singleArea?.id));
+    // dispatch(getAreaEvents(singleArea?.id));
   };
 
   return (

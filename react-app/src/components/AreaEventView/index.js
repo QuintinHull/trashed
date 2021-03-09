@@ -10,7 +10,7 @@ const AreaEventView = ({ singleArea }) => {
 
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));
-  }, [dispatch, areaEvents]);
+  }, [dispatch]);
 
   return (
     <div>

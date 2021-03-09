@@ -14,6 +14,16 @@ export const removeUser = () => {
   };
 };
 
+export const currentUser = () => async (dispatch) => {
+  const response = await fetch("/api/auth/");
+
+  if (response.ok) {
+    const user = await response.json();
+
+    return dispatch(setUser(user));
+  }
+};
+
 const sessionReducer = (state = { user: null }, action) => {
   let newState = { ...state };
   switch (action.type) {

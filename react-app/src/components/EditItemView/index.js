@@ -18,16 +18,16 @@ const EditItemView = ({ singleItem }) => {
   }, [dispatch, id]);
 
   const handleSubmit = async (event) => {
-    //     event.preventDefault();
-    //     // const itemId = await singleItem.id;
-    //     const updatedItem = {
-    //       id: itemId,
-    //       name,
-    //       description,
-    //     };
-    //     const itemWithChange = dispatch(updateItem(updatedItem));
-    //     dispatch(getItem(itemId));
-    //     setUpdatedItem(itemWithChange);
+    event.preventDefault();
+    const itemId = await singleItem.id;
+    const updatedItem = {
+      id: itemId,
+      name,
+      description,
+    };
+    const itemWithChange = dispatch(updateItem(updatedItem));
+    dispatch(getItem(itemId));
+    setUpdatedItem(itemWithChange);
   };
 
   return (

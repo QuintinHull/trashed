@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTypeItems } from "../../store/item";
 import ItemCreate from "../ItemCreate";
 import EditItemView from "../EditItemView";
-import { useHistory, useParams } from "react-router-dom";
+import { NavLink, useHistory, useParams } from "react-router-dom";
 
 const ItemView = () => {
   const { id } = useParams();
@@ -19,17 +19,14 @@ const ItemView = () => {
     <div className="body">
       {typeItems &&
         Object.values(typeItems).map((item) => (
-          <div key={item.id}>
+          <NavLink key={item.id} to={`/item/${item.id}`}>
             <div>{item.id}</div>
             <div>{item.name}</div>
             <div>{item.description}</div>
-          </div>
+          </NavLink>
         ))}
       <div>
         <ItemCreate />
-      </div>
-      <div>
-        <EditItemView />
       </div>
     </div>
   );

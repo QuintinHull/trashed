@@ -10,7 +10,7 @@ def all_items():
     items = Item.query.all()
     return {"all_items": {item.id: item.to_dict() for item in items}}
 
-@item_routes.route("/area/<id>")
+@item_routes.route("/type/<id>")
 def items_for_type(id):
     items = Item.query.filter(Item.type_id == id).all()    
     return {"all_type_items": {item.id: item.to_dict() for item in items}}    
@@ -27,8 +27,8 @@ def create_item(typeId):
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         item = Item(
-            name=form.data["address"],
-            description=form.data['city'],
+            name=form.data['name'],
+            description=form.data['description'],
             user_id=current_user.id,   
             type_id=typeId,
         )

@@ -61,7 +61,7 @@ export const getItem = (id) => async (dispatch) => {
 };
 
 export const getTypeItems = (id) => async (dispatch) => {
-  const response = await fetch(`/api/events/type/${id}`);
+  const response = await fetch(`/api/items/type/${id}`);
   const items = await response.json();
   return dispatch(getAllTypeItems(items));
 };

@@ -23,6 +23,9 @@ const ItemView = () => {
             <div>{item.id}</div>
             <div>{item.name}</div>
             <div>{item.description}</div>
+            <div>
+              {item.first_name} {item.last_name}
+            </div>
           </NavLink>
         ))}
       <div>

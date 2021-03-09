@@ -18,5 +18,8 @@ class Item(db.Model):
             "name": self.name,
             "description": self.description,
             "user_id": self.user_id,
-            "type_id": self.type_id
+            "type_id": self.type_id,
+            "type": self.item_type.name,
+            "first_name": self.item_user.first_name,
+            "last_name": self.item_user.last_name,
         }

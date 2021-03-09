@@ -33,5 +33,5 @@ class Area(db.Model):
             "created_at": self.created_at,
             "user_id": self.user_id,
             "first_name": self.area_user.first_name,
-            "last_name": , self.area_user.last_name,
+            "last_name": self.area_user.last_name
         }

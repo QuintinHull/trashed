@@ -115,6 +115,7 @@ const initialState = {};
 const itemReducer = (state = initialState, action) => {
   let newState;
   let all_items;
+  let all_type_items;
   switch (action.type) {
     case LOAD:
       newState = Object.assign({}, state, { ...action.payload });
@@ -127,8 +128,10 @@ const itemReducer = (state = initialState, action) => {
       return newState;
     case CREATE_ITEM:
       const new_item = action.payload.item;
-      all_items = state.all_items;
-      newState = { all_items: { ...all_items, [new_item.id]: new_item } };
+      all_type_items = state.all_type_items;
+      newState = {
+        all_type_items: { ...all_type_items, [new_item.id]: new_item },
+      };
       return newState;
     case UPDATE_ITEM:
       const updatedItem = action.payload.item;

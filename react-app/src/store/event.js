@@ -124,6 +124,7 @@ const initialState = {};
 const eventReducer = (state = initialState, action) => {
   let newState;
   let all_events;
+  let all_area_events;
   switch (action.type) {
     case LOAD:
       newState = Object.assign({}, state, { ...action.payload });
@@ -137,8 +138,10 @@ const eventReducer = (state = initialState, action) => {
     case CREATE_EVENT:
       const new_event = action.payload.event;
       console.log("--event reducer, action.payload-->", action.payload);
-      all_events = state.all_events;
-      newState = { all_events: { ...all_events, [new_event.id]: new_event } };
+      all_area_events = state.all_area_events;
+      newState = {
+        all_area_events: { ...all_area_events, [new_event.id]: new_event },
+      };
       return newState;
     case UPDATE_EVENT:
       const updatedEvent = action.payload.event;

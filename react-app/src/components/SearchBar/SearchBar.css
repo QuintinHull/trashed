@@ -1,14 +1,18 @@
 .search_container {
   display: flex;
   align-content: center;
+  flex-grow: unset;
 }
 
 .search_input {
   margin-left: 10px;
-  width: 12rem;
+  width: 13rem;
   height: 28px;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 4px 0px 0px 4px;
   border: none;
+  font-size: 18px;
+  /* font-family: "Scope One", serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 .search_button {
@@ -24,4 +28,9 @@
 .search_button img {
   width: 30px;
   height: auto;
+}
+
+.search_button:hover {
+  color: #228ffc;
+  box-shadow: 0.5px 0.5px 2px #228ffc;
 }

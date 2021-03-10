@@ -33,7 +33,7 @@ const NavBar = ({ setAuthenticated }) => {
         </NavLink>
 
         <NavLink to="/sign-up" exact={true} activeClassName="active">
-          <button className="navbar_links">sign up</button>
+          <button className="navbar_links navbar_links2">sign up</button>
         </NavLink>
 
         {/* <NavLink

@@ -17,6 +17,7 @@ import SearchResult from "./components/SearchResult";
 import ItemView from "./components/ItemView";
 import TypeView from "./components/TypeView";
 import SingleItemView from "./components/SingleItemView";
+import Footer from "./components/Footer";
 
 const store = configureStore();
 
@@ -127,6 +128,7 @@ function App() {
             <SingleItemView />
           </ProtectedRoute>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </ReduxProvider>
   );

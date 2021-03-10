@@ -25,12 +25,12 @@ const SearchBar = () => {
         <input
           type="text"
           className="search_input"
-          placeholder="search by city..."
+          placeholder=" search by city.."
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
         <button type="submit" className="search_button" onClick={handleSearch}>
-          {<img src="logo_search.svg"></img>}
+          <img src={"logo_search.svg"}></img>
         </button>
       </form>
     </div>

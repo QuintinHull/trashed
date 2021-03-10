@@ -1,0 +1,41 @@
+.nav_container {
+  background-color: #cfe8ef;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_container__left {
+  display: flex;
+  align-items: center;
+}
+.nav_container__center {
+  display: flex;
+  align-items: center;
+  font-family: "Viga", sans-serif;
+  font-size: 3rem;
+}
+.nav_container__right {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.nav_container__right .navbar_links {
+  font-family: "Viga", sans-serif;
+  background-color: #228ffc;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.nav_image {
+  display: flex;
+}
+
+.nav_image img {
+  width: 80px;
+  height: auto;
+}

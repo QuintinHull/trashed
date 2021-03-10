@@ -13,7 +13,7 @@ const NavBar = ({ setAuthenticated }) => {
         <div>
           <NavLink
             className="nav_image"
-            to="/home"
+            to="/"
             exact={true}
             activeClassName="active"
           >
@@ -28,32 +28,22 @@ const NavBar = ({ setAuthenticated }) => {
         <div>TRASHED</div>
       </div>
       <div className="nav_container__right">
-        <NavLink
-          to="/login"
-          exact={true}
-          className="navbar_links"
-          activeClassName="active"
-        >
-          login
+        <NavLink to="/login" exact={true} activeClassName="active">
+          <button className="navbar_links navbar_links1">login</button>
         </NavLink>
 
-        <NavLink
-          to="/sign-up"
-          exact={true}
-          className="navbar_links"
-          activeClassName="active"
-        >
-          sign up
+        <NavLink to="/sign-up" exact={true} activeClassName="active">
+          <button className="navbar_links">sign up</button>
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to="/users"
           exact={true}
           className="navbar_links"
           activeClassName="active"
         >
           users
-        </NavLink>
+        </NavLink> */}
 
         <LogoutButton
           className="navbar_links"

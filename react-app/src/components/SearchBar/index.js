@@ -21,7 +21,7 @@ const SearchBar = () => {
 
   return (
     <div>
-      <form>
+      <form className="search_container">
         <input
           type="text"
           className="search_input"
@@ -30,7 +30,7 @@ const SearchBar = () => {
           onChange={(e) => setCity(e.target.value)}
         />
         <button type="submit" className="search_button" onClick={handleSearch}>
-          go
+          {<img src="logo_search.svg"></img>}
         </button>
       </form>
     </div>

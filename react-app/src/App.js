@@ -71,11 +71,7 @@ function App() {
           >
             <User />
           </ProtectedRoute>
-          <ProtectedRoute
-            path="/home"
-            exact={true}
-            authenticated={authenticated}
-          >
+          <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
             <HomePage
               authenticated={authenticated}
               setAuthenticated={setAuthenticated}

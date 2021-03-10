@@ -1,0 +1,8 @@
+.logout_button {
+  background-color: #7fc149;
+  /* text-decoration: none; */
+  border: none;
+  font-family: "Viga", sans-serif;
+  font-size: 1.4rem;
+  border-radius: 0px 5px 5px 0px;
+}

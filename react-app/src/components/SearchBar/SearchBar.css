@@ -1,12 +1,27 @@
+.search_container {
+  display: flex;
+  align-content: center;
+}
+
 .search_input {
-  width: 13rem;
-  height: 1.7rem;
-  border-radius: 5px;
+  margin-left: 10px;
+  width: 12rem;
+  height: 28px;
+  border-radius: 5px 0px 0px 5px;
   border: none;
 }
 
 .search_button {
+  text-decoration: none;
+  border: none;
   width: 3rem;
-  height: 1.7rem;
-  background-color: #228ffc;
+  height: 30px;
+  background-color: #7fc149;
+  border-radius: 0px 5px 5px 0px;
+  font-family: "Viga", sans-serif;
+}
+
+.search_button img {
+  width: 30px;
+  height: auto;
 }

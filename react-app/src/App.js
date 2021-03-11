@@ -18,6 +18,7 @@ import ItemView from "./components/ItemView";
 import TypeView from "./components/TypeView";
 import SingleItemView from "./components/SingleItemView";
 import Footer from "./components/Footer";
+import SplashView from "./components/SplashView";
 
 const store = configureStore();
 
@@ -47,7 +48,12 @@ function App() {
         <NavBar setAuthenticated={setAuthenticated} />
         <Switch>
           <Route path="/login" exact={true}>
+            <SplashView />
             <LoginForm
+              authenticated={authenticated}
+              setAuthenticated={setAuthenticated}
+            />
+            <SignUpForm
               authenticated={authenticated}
               setAuthenticated={setAuthenticated}
             />

@@ -52,6 +52,7 @@
 .navbar_links2:hover {
   color: #228ffc;
   box-shadow: 0.5px 0.5px 1px #228ffc;
+  /* border-right: 5px solid #228ffc; */
 }
 
 .nav_image {

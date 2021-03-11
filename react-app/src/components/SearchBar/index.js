@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { getAreas, searchAreas } from "../../store/area";
+import "./SearchBar.css";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -20,16 +21,16 @@ const SearchBar = () => {
 
   return (
     <div>
-      <form>
+      <form className="search_container">
         <input
           type="text"
-          className="search"
-          placeholder="search by city..."
+          className="search_input"
+          placeholder=" search by city.."
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button type="submit" className="search__button" onClick={handleSearch}>
-          go
+        <button type="submit" className="search_button" onClick={handleSearch}>
+          <img src={"logo_search.svg"}></img>
         </button>
       </form>
     </div>

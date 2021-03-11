@@ -17,6 +17,7 @@ import SearchResult from "./components/SearchResult";
 import ItemView from "./components/ItemView";
 import TypeView from "./components/TypeView";
 import SingleItemView from "./components/SingleItemView";
+import Footer from "./components/Footer";
 
 const store = configureStore();
 
@@ -71,11 +72,7 @@ function App() {
           >
             <User />
           </ProtectedRoute>
-          <ProtectedRoute
-            path="/home"
-            exact={true}
-            authenticated={authenticated}
-          >
+          <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
             <HomePage
               authenticated={authenticated}
               setAuthenticated={setAuthenticated}
@@ -131,6 +128,7 @@ function App() {
             <SingleItemView />
           </ProtectedRoute>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </ReduxProvider>
   );

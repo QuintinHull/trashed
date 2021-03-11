@@ -1,0 +1,33 @@
+.foot_container {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  background-color: #cfe8ef;
+  height: 50px;
+}
+
+.foot_github {
+  display: flex;
+  margin-right: 10px;
+}
+
+.foot_linkedin {
+  display: flex;
+  margin-right: 10px;
+}
+
+.foot_github img {
+  width: 40px;
+  height: auto;
+  display: flex;
+  align-self: center;
+}
+
+.foot_linkedin img {
+  width: 46px;
+  height: auto;
+  align-self: center;
+}

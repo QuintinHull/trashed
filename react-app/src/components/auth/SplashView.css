@@ -1,0 +1,25 @@
+.splash_row_1 {
+  display: flex;
+  justify-content: center;
+  background-color: #228ffc;
+}
+
+.splash_row_1 img {
+  height: 250px;
+}
+
+.splash_row_2 {
+  height: 30px;
+
+  background-color: #7fc149;
+}
+
+.splash_row_3 {
+  display: flex;
+  justify-content: center;
+  background-color: #228ffc;
+}
+
+.splash_row_3 img {
+  height: 250px;
+}

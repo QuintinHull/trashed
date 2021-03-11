@@ -65,6 +65,7 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
 
   return (
     <div>
+      <div>sign up</div>
       <form onSubmit={onSignUp}>
         <div>
           <label>first name</label>

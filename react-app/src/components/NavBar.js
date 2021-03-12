@@ -3,9 +3,15 @@ import { NavLink } from "react-router-dom";
 import LogoutButton from "./auth/LogoutButton";
 import SearchBar from "./SearchBar";
 import "./NavBar.css";
+// import { authenticate } from "../services/auth";
 
-const NavBar = ({ setAuthenticated }) => {
+const NavBar = ({ authenticated, setAuthenticated }) => {
   const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
+
+  // in progress
+  if (!authenticated) {
+    return null;
+  }
 
   return (
     <nav className="nav_container">

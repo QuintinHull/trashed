@@ -115,9 +115,9 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
         </div>
         <button type="submit">Sign Up</button>
       </form>
-      <form onSubmit={demoLogin}>
+      {/* <form onSubmit={demoLogin}>
         <button type="submit">Demo Login</button>
-      </form>
+      </form> */}
     </div>
   );
 };

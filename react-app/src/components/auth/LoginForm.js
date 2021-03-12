@@ -48,40 +48,49 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <div className="splash_container">
-      <div className="splash_container_content">
+    <div className="splash">
+      <div className="splash_container">
         <div className="splash_column_1">
           <div className="splash_login_container">
-            <form onSubmit={onLogin}>
-              <div>log in</div>
-              <div>
-                {errors.map((error) => (
-                  <div>{error}</div>
-                ))}
+            <form className="splash_login_form" onSubmit={onLogin}>
+              <div className="login_row_1">
+                <div className="login_title">log in</div>
+                <div>
+                  {errors.map((error) => (
+                    <div className="login_errors">{error}</div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <label htmlFor="email">Email</label>
+              <div className="login_row_2">
+                {/* <label htmlFor="email">Email</label> */}
                 <input
                   name="email"
                   type="text"
-                  placeholder="Email"
+                  placeholder="email"
                   value={email}
                   onChange={updateEmail}
                 />
               </div>
-              <div>
-                <label htmlFor="password">Password</label>
+              <div className="login_row_3">
+                {/* <label htmlFor="password">Password</label> */}
                 <input
                   name="password"
                   type="password"
-                  placeholder="Password"
+                  placeholder="password"
                   value={password}
                   onChange={updatePassword}
                 />
-                <button type="submit">Login</button>
-
-                <button type="submit" onClick={demoLogin}>
-                  Demo Login
+              </div>
+              <div className="login_row_4">
+                <button
+                  className="demo_button"
+                  type="submit"
+                  onClick={demoLogin}
+                >
+                  demo
+                </button>
+                <button className="login_button" type="submit">
+                  login
                 </button>
               </div>
             </form>

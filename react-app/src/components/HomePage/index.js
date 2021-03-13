@@ -4,6 +4,7 @@ import AreaCreate from "../AreaCreate";
 import { getAreas } from "../../store/area";
 import { WrappedGoogleMap } from "../GoogleMap";
 
+import TypeView from "../TypeView";
 import "./HomePage.css";
 
 const HomePageComponent = () => {
@@ -30,7 +31,7 @@ const HomePageComponent = () => {
         </div>
         <div className="home_col1_row2">
           <div className="home_item_content">
-            <div>item carousel</div>
+            <TypeView />
           </div>
         </div>
       </div>

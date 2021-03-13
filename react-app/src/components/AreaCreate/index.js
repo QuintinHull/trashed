@@ -122,44 +122,62 @@ const AreaCreate = () => {
   return (
     <div className="area_create_container">
       <form onSubmit={handleSubmit}>
-        <label>address: </label>
-        <input
-          type="text"
-          required
-          placeholder="265 Kaelepulu Dr"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        ></input>
-        <label>city: </label>
-        <input
-          type="text"
-          required
-          placeholder="Kailua"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        ></input>
-        <label>state: </label>
-        <select value={state} onChange={(e) => setState(e.target.value)}>
-          {states.map((state) => (
-            <option key={state}>{state}</option>
-          ))}
-        </select>
-        <label>zipcode: </label>
-        <input
-          type="number"
-          placeholder="96734"
-          value={zipcode}
-          onChange={(e) => setZipcode(e.target.value)}
-        ></input>
-        <label>description: </label>
-        <textarea
-          placeholder="Tell us about this trashed area!"
-          maxLength="250"
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-        <button type="submit">trashed</button>
+        <div className="area_create_col1">
+          <div>
+            <label>address: </label>
+            <input
+              type="text"
+              required
+              placeholder="265 Kaelepulu Dr"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            ></input>
+          </div>
+          <div>
+            <label>city: </label>
+            <input
+              type="text"
+              required
+              placeholder="Kailua"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            ></input>
+          </div>
+        </div>
+        <div className="area_create_col2">
+          <div>
+            <label>state: </label>
+            <select value={state} onChange={(e) => setState(e.target.value)}>
+              {states.map((state) => (
+                <option key={state}>{state}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label>zipcode: </label>
+            <input
+              type="number"
+              placeholder="96734"
+              value={zipcode}
+              onChange={(e) => setZipcode(e.target.value)}
+            ></input>
+          </div>
+        </div>
+        <div className="area_create_col3">
+          <label>description: </label>
+          <textarea
+            placeholder="Tell us about this trashed area!"
+            maxLength="250"
+            rows="4"
+            cols="35"
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></textarea>
+        </div>
+        <div className="area_create_col4">
+          <button type="submit">trashed</button>
+        </div>
       </form>
     </div>
   );

@@ -4,6 +4,8 @@ import { createArea } from "../../store/area";
 import Geocode from "react-geocode";
 import { getAreas } from "../../store/area";
 
+import "./AreaCreate.css";
+
 const AreaCreate = () => {
   const dispatch = useDispatch();
 
@@ -118,7 +120,7 @@ const AreaCreate = () => {
   };
 
   return (
-    <div>
+    <div className="area_create_container">
       <form onSubmit={handleSubmit}>
         <label>address: </label>
         <input

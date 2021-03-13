@@ -37,7 +37,7 @@ export default [
         color: "#ff0000",
       },
       {
-        visibility: "on",
+        visibility: "off",
       },
     ],
   },

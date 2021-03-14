@@ -1,0 +1,44 @@
+.type_container {
+  height: 100%;
+}
+
+.type_title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.type_list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  /* border: 1px solid red; */
+  height: 80%;
+}
+
+.type_navlink {
+  text-decoration: none;
+}
+
+.type_list img {
+  height: 150px;
+}
+
+.type_name {
+  display: flex;
+  justify-content: center;
+  font-family: "Scope One", serif;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.type_list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.type_list::-webkit-scrollbar-thumb {
+  background-color: #7fc149;
+  border-radius: 5px;
+}

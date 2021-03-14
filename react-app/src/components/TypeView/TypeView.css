@@ -1,29 +1,38 @@
 .type_container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px dashed black; */
 }
 
 .type_title {
   display: flex;
   justify-content: center;
+  margin-top: 5px;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
 }
 
 .type_list {
-  margin-top: 15px;
+  margin-top: auto;
   display: flex;
   justify-content: flex-start;
+  align-content: flex-end;
   overflow-y: scroll;
+
   /* border: 1px solid red; */
-  height: 80%;
+  height: 70%;
 }
 
 .type_navlink {
   text-decoration: none;
+  /* border: 1px solid red; */
 }
 
 .type_list img {
   height: 150px;
+  /* border: 1px solid red; */
 }
 
 .type_name {
@@ -34,11 +43,11 @@
   color: black;
 }
 
-.type_list::-webkit-scrollbar {
+/* .type_list::-webkit-scrollbar {
   height: 6px;
-}
+} */
 
-.type_list::-webkit-scrollbar-thumb {
+/* .type_list::-webkit-scrollbar-thumb {
   background-color: #7fc149;
-  border-radius: 5px;
-}
+  border-radius: 4px;
+} */

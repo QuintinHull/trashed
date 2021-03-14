@@ -1,7 +1,7 @@
 /* TODO Add site wide styles */
-/* .html {
-  width: 100%;
-} */
+html {
+  background-color: #228ffc;
+}
 body {
   margin: 0;
   min-width: 1000px;

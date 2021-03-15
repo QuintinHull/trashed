@@ -4,6 +4,8 @@ import { createArea } from "../../store/area";
 import Geocode from "react-geocode";
 import { getAreas } from "../../store/area";
 
+import "./AreaCreate.css";
+
 const AreaCreate = () => {
   const dispatch = useDispatch();
 
@@ -118,46 +120,69 @@ const AreaCreate = () => {
   };
 
   return (
-    <div>
+    <div className="area_create_container">
       <form onSubmit={handleSubmit}>
-        <label>address: </label>
-        <input
-          type="text"
-          required
-          placeholder="265 Kaelepulu Dr"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        ></input>
-        <label>city: </label>
-        <input
-          type="text"
-          required
-          placeholder="Kailua"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        ></input>
-        <label>state: </label>
-        <select value={state} onChange={(e) => setState(e.target.value)}>
-          {states.map((state) => (
-            <option key={state}>{state}</option>
-          ))}
-        </select>
-        <label>zipcode: </label>
-        <input
-          type="number"
-          placeholder="96734"
-          value={zipcode}
-          onChange={(e) => setZipcode(e.target.value)}
-        ></input>
-        <label>description: </label>
-        <textarea
-          placeholder="Tell us about this trashed area!"
-          maxLength="250"
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-        <button type="submit">trashed</button>
+        <div className="area_create_col1">
+          <input
+            className="area_create_address"
+            type="text"
+            required
+            placeholder="265 Kaelepulu Dr"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          ></input>
+
+          {/* <label>city: </label> */}
+          <input
+            className="area_create_city"
+            type="text"
+            required
+            placeholder="Kailua"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          ></input>
+        </div>
+        <div className="area_create_col2">
+          {/* <label>state: </label> */}
+          <select
+            className="area_create_state"
+            value={state}
+            onChange={(e) => setState(e.target.value)}
+          >
+            {states.map((state) => (
+              <option key={state}>{state}</option>
+            ))}
+          </select>
+
+          {/* <label>zipcode: </label> */}
+          <input
+            required
+            className="area_create_zip"
+            type="number"
+            placeholder="96734"
+            value={zipcode}
+            onChange={(e) => setZipcode(e.target.value)}
+          ></input>
+        </div>
+        <div className="area_create_col3">
+          {/* <label>description: </label> */}
+          <textarea
+            required
+            className="area_create_descript"
+            placeholder="Share a brief description about this trashed area!"
+            maxLength="250"
+            rows="4"
+            cols="40"
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></textarea>
+        </div>
+        <div className="area_create_col4">
+          <button className="area_create_button" type="submit">
+            TRASHED
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -24,6 +24,17 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     }
   };
 
+  const demoLogin = async (e) => {
+    e.preventDefault();
+    const user = await login("demo@aa.io", "password");
+    if (!user.errors) {
+      dispatch(setUser(user));
+      setAuthenticated(true);
+    } else {
+      setErrors(user.errors);
+    }
+  };
+
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -36,48 +47,70 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     return <Redirect to="/" />;
   }
 
+  const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
+
   return (
-    <div className="splash_container">
-      <div className="splash_row_1">
-        <form onSubmit={onLogin}>
-          <div>log in</div>
-          <div>
-            {errors.map((error) => (
-              <div>{error}</div>
-            ))}
+    <div className="splash">
+      <div className="splash_container">
+        <div className="splash_column_1">
+          <div className="splash_login_container">
+            <form className="splash_login_form" onSubmit={onLogin}>
+              <div className="login_row_1">
+                <div className="login_title">log in</div>
+                <div>
+                  {errors.map((error) => (
+                    <div className="login_errors">{error}</div>
+                  ))}
+                </div>
+              </div>
+              <div className="login_row_2">
+                {/* <label htmlFor="email">Email</label> */}
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="email"
+                  value={email}
+                  onChange={updateEmail}
+                />
+              </div>
+              <div className="login_row_3">
+                {/* <label htmlFor="password">Password</label> */}
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="password"
+                  value={password}
+                  onChange={updatePassword}
+                />
+              </div>
+              <div className="login_row_4">
+                <button
+                  className="demo_button"
+                  type="submit"
+                  onClick={demoLogin}
+                >
+                  demo
+                </button>
+                <button className="login_button" type="submit">
+                  login
+                </button>
+              </div>
+            </form>
           </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              name="email"
-              type="text"
-              placeholder="Email"
-              value={email}
-              onChange={updateEmail}
+        </div>
+        <div className="splash_column_2">
+          {<img src={`logo_beach.svg`} alt="trashed logo"></img>}
+        </div>
+        <div className="splash_column_3">
+          <div className="splash_signup_container">
+            <SignUpForm
+              authenticated={authenticated}
+              setAuthenticated={setAuthenticated}
             />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={updatePassword}
-            />
-            <button type="submit">Login</button>
-          </div>
-        </form>
-        {<img src="logo_beach.svg"></img>}
+        </div>
       </div>
-      <div className="splash_row_2"></div>
-      <div className="splash_row_3">
-        {<img src="land_logo.svg"></img>}
-        <SignUpForm
-          authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-        />
-      </div>
+      <div className="splash_title">TRASHED</div>
     </div>
   );
 };

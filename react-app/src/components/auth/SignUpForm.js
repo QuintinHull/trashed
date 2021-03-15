@@ -5,6 +5,7 @@ import { login } from "../../services/auth";
 import { signUp } from "../../services/auth";
 import { setUser } from "../../store/session";
 import { addUser } from "../../store/user";
+import "./SignUpForm.css";
 
 const SignUpForm = ({ authenticated, setAuthenticated }) => {
   const dispatch = useDispatch();
@@ -33,11 +34,11 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
     }
   };
 
-  const demoLogin = async (e) => {
-    e.preventDefault();
-    const user = await login("demo@aa.io", "password");
-    dispatch(setUser(user));
-  };
+  // const demoLogin = async (e) => {
+  //   e.preventDefault();
+  //   const user = await login("demo@aa.io", "password");
+  //   dispatch(setUser(user));
+  // };
 
   const updateFirstName = (e) => {
     setFirstName(e.target.value);
@@ -64,59 +65,68 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <div>
-      <div>sign up</div>
-      <form onSubmit={onSignUp}>
-        <div>
-          <label>first name</label>
+    <div className="signup_body">
+      <form className="splash_signup_form" onSubmit={onSignUp}>
+        <div className="signup_row_1">
+          <div>sign up</div>
+        </div>
+        <div className="signup_row_2">
+          {/* <label>first name</label> */}
           <input
             type="text"
+            placeholder="first name"
             name="firstName"
             onChange={updateFirstName}
             value={firstName}
           ></input>
         </div>
-        <div>
-          <label>last name</label>
+        <div className="signup_row_3">
+          {/* <label>last name</label> */}
           <input
             type="text"
+            placeholder="last name"
             name="lastName"
             onChange={updateLastName}
             value={lastName}
           ></input>
         </div>
-        <div>
-          <label>email</label>
+        <div className="signup_row_4">
+          {/* <label>email</label> */}
           <input
             type="text"
+            placeholder="email"
             name="email"
             onChange={updateEmail}
             value={email}
           ></input>
         </div>
-        <div>
-          <label>password</label>
+        <div className="signup_row_5">
+          {/* <label>password</label> */}
           <input
             type="password"
+            placeholder="password"
             name="password"
             onChange={updatePassword}
             value={password}
           ></input>
         </div>
-        <div>
-          <label>confirm password</label>
+        <div className="signup_row_6">
+          {/* <label>confirm password</label> */}
           <input
             type="password"
+            placeholder="confirm password"
             name="repeat_password"
             onChange={updateRepeatPassword}
             value={repeatPassword}
             required={true}
           ></input>
         </div>
-        <button type="submit">Sign Up</button>
-      </form>
-      <form onSubmit={demoLogin}>
-        <button type="submit">Demo Login</button>
+        <div className="signup_row_7">
+          <button type="submit">sign up</button>
+        </div>
+        {/* <form onSubmit={demoLogin}>
+          <button type="submit">Demo Login</button>
+        </form> */}
       </form>
     </div>
   );

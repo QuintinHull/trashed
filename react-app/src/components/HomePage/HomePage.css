@@ -1,0 +1,112 @@
+.home_body {
+  display: flex;
+  /* margin: auto; */
+  margin-top: 7px;
+  /* border: 1px solid red; */
+  height: 87%;
+  width: 100%;
+  background-color: #228ffc;
+}
+
+.home_column_1 {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  width: 30%;
+  height: 98.5%;
+  /* margin-bottom: 5px; */
+}
+
+.home_col1_row1 {
+  height: 55%;
+  overflow-x: scroll;
+}
+
+.home_area_title {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 2px 2px 0px 0px;
+  /* border-bottom: 3px solid black; */
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  /* box-shadow: rgb(0 0 0 / 30%) 0px 10px 5px; */
+}
+
+.home_area_container {
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  /* margin-right: 5px; */
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  font-family: "Scope One", serif;
+}
+
+.home_area_content {
+  margin-left: 7px;
+  margin-right: 7px;
+  /* margin-top: 7px; */
+}
+
+.home_area_bottom_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_area_nav {
+  color: black;
+  font-size: 13px;
+}
+
+.home_area_nav:hover {
+  color: #228ffc;
+}
+
+.home_col1_row2 {
+  height: 45%;
+}
+
+.home_item_content {
+  height: 88.3%;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  /* margin-right: 5px; */
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+}
+
+.home_column_2 {
+  /* border: 1px solid blue; */
+  width: 70%;
+  height: 99%;
+}
+
+.home_col2_row1 {
+  height: 75%;
+  margin-left: 11px;
+}
+
+.home_map_container {
+  height: 100%;
+}
+.home_col2_row2 {
+  margin-top: 8px;
+  height: 25%;
+}
+
+.home_area_span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.home_area_content_title {
+  /* font-weight: bolder; */
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #cfe8ef; */
+}

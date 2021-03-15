@@ -1,0 +1,30 @@
+.area_events_card {
+  /* background-color: white; */
+  margin-top: 5px;
+}
+
+.area_event_span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.area_events_card_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.area_event_bottom_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area_event_link {
+  color: black;
+  font-size: 14px;
+}
+
+.area_event_link:hover {
+  color: #228ffc;
+}

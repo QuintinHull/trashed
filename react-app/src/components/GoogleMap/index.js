@@ -23,8 +23,8 @@ const GoogleMapComponent = () => {
 
   return (
     <GoogleMap
-      defaultZoom={8}
-      defaultCenter={{ lat: 20.7984, lng: -156.3319 }}
+      defaultZoom={7.6}
+      defaultCenter={{ lat: 20.7984, lng: -157.3319 }}
       defaultOptions={{ styles: mapStyles }}
     >
       {areas &&

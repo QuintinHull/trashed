@@ -19,6 +19,8 @@ const SearchBar = () => {
     history.push(`/locate?city=${city}`);
   };
 
+  const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
+
   return (
     <div>
       <form className="search_container">
@@ -30,7 +32,7 @@ const SearchBar = () => {
           onChange={(e) => setCity(e.target.value)}
         />
         <button type="submit" className="search_button" onClick={handleSearch}>
-          <img src={"logo_search.svg"} alt="search button"></img>
+          <img src={`logo_search.svg`} alt="search button"></img>
         </button>
       </form>
     </div>

@@ -13,6 +13,8 @@ const TypeView = () => {
     dispatch(getTypes());
   }, [dispatch]);
 
+  const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
+
   return (
     <div className="type_container">
       <div className="type_title">reduce waste at home</div>

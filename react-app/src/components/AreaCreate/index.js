@@ -123,7 +123,6 @@ const AreaCreate = () => {
     <div className="area_create_container">
       <form onSubmit={handleSubmit}>
         <div className="area_create_col1">
-          {/* <label>address: </label> */}
           <input
             className="area_create_address"
             type="text"

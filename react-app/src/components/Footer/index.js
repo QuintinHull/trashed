@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <div className="foot_container">
       <a href="https://github.com/QuintinHull/trashed" className="foot_github">
-        {<img src={`${imagePath}gitHubMark.png`} alt="github logo"></img>}
+        {<img src={`gitHubMark.png`} alt="github logo"></img>}
       </a>
       <a href="www.linkedin.com/in/quintinhull92" className="foot_linkedin">
-        {<img src={`${imagePath}linkedIn.png`} alt="linkedin logo"></img>}
+        {<img src={`linkedIn.png`} alt="linkedin logo"></img>}
       </a>
     </div>
   );

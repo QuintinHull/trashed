@@ -29,6 +29,13 @@
 .area_view_row2 {
   display: flex;
   justify-content: center;
+  margin: auto;
+  /* align-content: center; */
+  /* background-color: white; */
+  /* border: 1px solid black; */
+  margin-top: 10px;
+  height: 70px;
+  width: 70%;
 }
 
 .area_view_row3 {

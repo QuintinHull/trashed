@@ -47,6 +47,8 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     return <Redirect to="/" />;
   }
 
+  const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
+
   return (
     <div className="splash">
       <div className="splash_container">
@@ -97,7 +99,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           </div>
         </div>
         <div className="splash_column_2">
-          {<img src="logo_beach.svg" alt="trashed logo"></img>}
+          {<img src={`logo_beach.svg`} alt="trashed logo"></img>}
         </div>
         <div className="splash_column_3">
           <div className="splash_signup_container">

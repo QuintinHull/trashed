@@ -1,0 +1,81 @@
+.event_create_container {
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+}
+
+.event_create_container form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  width: 95%;
+  height: 100%;
+}
+
+.event_create_col1 {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  /* border: 1px solid red; */
+  width: 24%;
+}
+.event_create_col2 {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  /* border: 1px solid green; */
+  width: 25%;
+}
+.event_create_col3 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  /* align-self: center; */
+  /* border: 1px solid blue; */
+  width: 30%;
+  /* height: 70%; */
+}
+.event_create_col4 {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  width: 8%;
+}
+
+.event_create_col4 button {
+  align-self: center;
+  text-decoration: none;
+  border: none;
+  background-color: #7fc149;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 1.7vh;
+}
+
+.event_create_col4 button:hover {
+  color: #228ffc;
+  box-shadow: 0.5px 0.5px 1px #228ffc;
+}
+
+.event_create_input {
+  background-color: #cfe8ef;
+  border: none;
+  border-radius: 7px;
+  font-family: "Scope One", serif;
+  font-size: 1rem;
+  height: 2rem;
+}
+
+.event_create_textarea {
+  background-color: #cfe8ef;
+  border: none;
+  border-radius: 7px;
+  font-family: "Scope One", serif;
+  font-size: 0.8rem;
+  width: 95%;
+  height: 3rem;
+  resize: none;
+}

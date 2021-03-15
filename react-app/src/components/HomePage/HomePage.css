@@ -12,7 +12,7 @@
   flex-direction: column;
   /* border: 1px solid blue; */
   width: 30%;
-  height: 100.3%;
+  height: 100%;
 }
 
 .home_col1_row1 {
@@ -25,6 +25,7 @@
   margin-left: 10px;
   /* margin-right: 5px; */
   border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
 }
 
 .home_col1_row2 {
@@ -38,6 +39,7 @@
   margin-left: 10px;
   /* margin-right: 5px; */
   border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
 }
 
 .home_column_2 {
@@ -47,7 +49,7 @@
 }
 
 .home_col2_row1 {
-  height: 80%;
+  height: 75%;
   margin-left: 11px;
 }
 
@@ -55,5 +57,5 @@
   height: 100%;
 }
 .home_col2_row2 {
-  height: 20%;
+  height: 25%;
 }

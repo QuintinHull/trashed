@@ -1,6 +1,7 @@
 .home_body {
   display: flex;
-  margin: auto;
+  /* margin: auto; */
+  margin-top: 7px;
   /* border: 1px solid red; */
   height: 87%;
   width: 100%;
@@ -46,8 +47,9 @@
 }
 
 .home_area_content {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
+  /* margin-top: 7px; */
 }
 
 .home_area_bottom_row {
@@ -93,5 +95,18 @@
   height: 100%;
 }
 .home_col2_row2 {
+  margin-top: 8px;
   height: 25%;
+}
+
+.home_area_span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.home_area_content_title {
+  /* font-weight: bolder; */
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #cfe8ef; */
 }

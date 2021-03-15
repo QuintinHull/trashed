@@ -23,7 +23,7 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
             exact={true}
             activeClassName="active"
           >
-            {<img src="simpleLogo.svg"></img>}
+            {<img src={`${imagePath}simpleLogo.svg`} alt="trashed logo"></img>}
           </NavLink>
         </div>
         <div>

@@ -34,11 +34,11 @@ const SignUpForm = ({ authenticated, setAuthenticated }) => {
     }
   };
 
-  const demoLogin = async (e) => {
-    e.preventDefault();
-    const user = await login("demo@aa.io", "password");
-    dispatch(setUser(user));
-  };
+  // const demoLogin = async (e) => {
+  //   e.preventDefault();
+  //   const user = await login("demo@aa.io", "password");
+  //   dispatch(setUser(user));
+  // };
 
   const updateFirstName = (e) => {
     setFirstName(e.target.value);

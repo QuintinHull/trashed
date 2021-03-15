@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { getAreas, searchAreas } from "../../store/area";
+import { searchAreas } from "../../store/area";
 import "./SearchBar.css";
 
 const SearchBar = () => {
@@ -30,7 +30,7 @@ const SearchBar = () => {
           onChange={(e) => setCity(e.target.value)}
         />
         <button type="submit" className="search_button" onClick={handleSearch}>
-          <img src={"logo_search.svg"}></img>
+          <img src={"logo_search.svg"} alt="search button"></img>
         </button>
       </form>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getAreaEvents } from "../../store/event";
+// import { getAreaEvents } from "../../store/event";
 import { createEvent } from "../../store/event";
 
 const EventCreate = ({ singleArea }) => {

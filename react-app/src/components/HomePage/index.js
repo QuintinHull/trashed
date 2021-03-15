@@ -26,16 +26,22 @@ const HomePageComponent = () => {
             Object.values(areas).map((area) => (
               <div className="home_area_container" key={area.id}>
                 <div className="home_area_content">
-                  <div>{area.description}</div>
-                  <div>
-                    location: {area.address}, {area.city} {area.state}{" "}
-                    {area.zipcode}
+                  <div className="home_area_content_title">
+                    {area.description}
                   </div>
                   <div>
-                    reported by: {area.first_name} {area.last_name}
+                    <span className="home_area_span">location: </span>
+                    {area.address}, {area.city} {area.state} {area.zipcode}
+                  </div>
+                  <div>
+                    <span className="home_area_span">reported by: </span>
+                    {area.first_name} {area.last_name}
                   </div>
                   <div className="home_area_bottom_row">
-                    <div>reported on: {area.created_at}</div>
+                    <div>
+                      <span className="home_area_span">reported on: </span>
+                      {area.created_at}
+                    </div>
                     <NavLink className="home_area_nav" to={`/area/${area.id}`}>
                       details
                     </NavLink>

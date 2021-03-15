@@ -106,13 +106,13 @@
 }
 
 .area_create_button {
-  height: 50px;
+  height: 45px;
   font-size: 2vh;
   text-decoration: none;
   border: none;
   background-color: #7fc149;
   font-family: "Viga", sans-serif;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px;
 }
 
 .area_create_button:hover {

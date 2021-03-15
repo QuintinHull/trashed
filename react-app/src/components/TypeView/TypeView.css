@@ -18,11 +18,12 @@
   margin-top: auto;
   display: flex;
   justify-content: flex-start;
+  /* align-self: center; */
   align-content: flex-end;
   overflow-y: scroll;
 
   /* border: 1px solid red; */
-  height: 70%;
+  height: 80%;
 }
 
 .type_navlink {
@@ -31,7 +32,7 @@
 }
 
 .type_list img {
-  height: 150px;
+  height: 9rem;
   /* border: 1px solid red; */
 }
 

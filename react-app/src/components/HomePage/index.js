@@ -6,6 +6,7 @@ import { WrappedGoogleMap } from "../GoogleMap";
 
 import TypeView from "../TypeView";
 import "./HomePage.css";
+import { NavLink } from "react-router-dom";
 
 const HomePageComponent = () => {
   const dispatch = useDispatch();
@@ -19,13 +20,27 @@ const HomePageComponent = () => {
   return (
     <div className="home_body">
       <div className="home_column_1">
+        <div className="home_area_title">trashed areas</div>
         <div className="home_col1_row1">
           {areas &&
             Object.values(areas).map((area) => (
-              <div className="home_event_content" key={area.id}>
-                <div>{area.id}</div>
-                <div>{area.address}</div>
-                <div>{area.description}</div>
+              <div className="home_area_container" key={area.id}>
+                <div className="home_area_content">
+                  <div>{area.description}</div>
+                  <div>
+                    location: {area.address}, {area.city} {area.state}{" "}
+                    {area.zipcode}
+                  </div>
+                  <div>
+                    reported by: {area.first_name} {area.last_name}
+                  </div>
+                  <div className="home_area_bottom_row">
+                    <div>reported on: {area.created_at}</div>
+                    <NavLink className="home_area_nav" to={`/area/${area.id}`}>
+                      details
+                    </NavLink>
+                  </div>
+                </div>
               </div>
             ))}
         </div>

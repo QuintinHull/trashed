@@ -1,7 +1,8 @@
 .home_body {
   display: flex;
   /* margin: auto; */
-  margin-top: 7px;
+  margin-top: 60px;
+  margin-bottom: 50px;
   /* border: 1px solid red; */
   height: 87%;
   width: 100%;

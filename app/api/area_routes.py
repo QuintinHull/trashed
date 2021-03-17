@@ -10,6 +10,8 @@ area_routes = Blueprint("areas", __name__)
 @area_routes.route("/")
 def all_areas():
     areas = Area.query.all()
+    # areas = Area.query.order_by(Area.id)
+    # areas = Area.query.all().order_by(Area.id)
     return {"all_areas": {area.id: area.to_dict() for area in areas}}
     
 @area_routes.route("/<id>")

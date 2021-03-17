@@ -99,7 +99,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           </div>
         </div>
         <div className="splash_column_2">
-          {<img src={`logo_beach.svg`} alt="trashed logo"></img>}
+          {<img src={`${imagePath}/logo_beach.svg`} alt="trashed logo"></img>}
         </div>
         <div className="splash_column_3">
           <div className="splash_signup_container">

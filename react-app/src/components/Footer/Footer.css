@@ -1,12 +1,12 @@
 .foot_container {
+  background-color: #cfe8ef;
+  width: 100%;
+  height: 50px;
   display: flex;
   justify-content: flex-end;
   position: fixed;
   bottom: 0;
-  width: 100%;
 
-  background-color: #cfe8ef;
-  height: 50px;
 }
 
 .foot_github {

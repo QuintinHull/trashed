@@ -32,7 +32,7 @@ const SearchBar = () => {
           onChange={(e) => setCity(e.target.value)}
         />
         <button type="submit" className="search_button" onClick={handleSearch}>
-          <img src={`logo_search.svg`} alt="search button"></img>
+          <img src={`${imagePath}/logo_search.svg`} alt="search button"></img>
         </button>
       </form>
     </div>

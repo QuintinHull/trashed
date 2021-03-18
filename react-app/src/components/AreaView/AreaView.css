@@ -5,9 +5,10 @@
 .area_view_title {
   display: flex;
   justify-content: center;
-  padding: 5px;
   height: 60px;
+  padding-bottom: 5px;
   background-color: white;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
   border-radius: 2px;
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
@@ -27,25 +28,31 @@
 }
 
 .area_view_row2 {
-  display: flex;
-  justify-content: center;
   margin: auto;
-  /* align-content: center; */
-  /* background-color: white; */
-  /* border: 1px solid black; */
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
   margin-top: 10px;
-  height: 70px;
   width: 70%;
+  height: 60px;
 }
 
 .area_view_row3 {
-  display: flex;
-  justify-content: center;
+  margin: auto;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  margin-top: 10px;
+  width: 70%;
+  height: 80px;
 }
 
 .area_view_row4 {
+  margin-top: 1%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* align-content: center; */
+  /* justify-content: center; */
 }
 
 .a_v_row1_col1 {
@@ -82,11 +89,12 @@
   overflow-x: scroll;
 }
 
-.area_view_row4 button {
-  background-color: #7fc149;
-  border: none;
-  border-radius: 4px;
-  height: 50px;
+.area_delete_button_title {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  align-self: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
 
@@ -101,4 +109,17 @@
   justify-content: center;
   /* background-color: white; */
   height: 40px;
+}
+
+.area_delete_button {
+  align-self: center;
+  background-color: #7fc149;
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Viga", sans-serif;
+  font-size: 1.9rem;
+  width: 20%;
+  width: 20%;
 }

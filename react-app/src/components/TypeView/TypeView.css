@@ -1,11 +1,6 @@
 .type_container {
   display: flex;
-  flex-direction: column;
-  /* min-height: 200px; */
-  /* background-color: white;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-radius: 2px; */
+  flex-direction: column; 
 }
 
 .type_title {
@@ -14,6 +9,7 @@
   margin-top: 5px;
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
+ 
 }
 
 .type_list {
@@ -28,6 +24,7 @@
   text-decoration: none; 
   height: fit-content;
   min-height: fit-content;
+  padding-bottom: 1%;
 }
 
 .type_list img {

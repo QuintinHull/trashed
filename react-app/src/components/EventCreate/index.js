@@ -38,7 +38,7 @@ const EventCreate = ({ singleArea }) => {
       <form onSubmit={handleSubmit}>
         <div className="event_create_col1">
           <input
-            className="event_create_input"
+            className="event_create_input_title"
             type="text"
             placeholder="title"
             required
@@ -48,7 +48,7 @@ const EventCreate = ({ singleArea }) => {
         </div>
         <div className="event_create_col2">
           <input
-            className="event_create_input"
+            className="event_create_input_date"
             type="datetime-local"
             required
             value={dateTime}
@@ -61,15 +61,14 @@ const EventCreate = ({ singleArea }) => {
             type="text"
             placeholder="Leave a brief description of your event!"
             required
-            // rows="4"
-            // cols="40"
             maxLength="250"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <div className="event_create_col4">
-          <button type="submit">create event</button>
+          <div className="event_button_title">create an event:</div>
+          <button type="submit">add</button>
         </div>
       </form>
     </div>

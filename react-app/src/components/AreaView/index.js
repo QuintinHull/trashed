@@ -91,7 +91,8 @@ const AreaView = () => {
         {singleArea && <EditAreaView singleArea={singleArea} />}
       </div>
       <div className="area_view_row4">
-        <button onClick={() => handleDelete(singleArea.id)}>cleaned</button>
+        {/* <div className="area_delete_button_title">remove this area by marking it clean:</div> */}
+        <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button>
       </div>
     </div>
   );

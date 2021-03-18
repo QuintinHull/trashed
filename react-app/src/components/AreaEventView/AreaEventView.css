@@ -23,6 +23,7 @@
 .area_event_link {
   color: black;
   font-size: 14px;
+  margin-top: 5px;
 }
 
 .area_event_link:hover {

@@ -67,7 +67,9 @@ const HomePageComponent = () => {
           />
         </div>
         <div className="home_col2_row2">
-          <AreaCreate />
+          <div className="home_area_create">
+            <AreaCreate />
+          </div>
         </div>
       </div>
     </div>

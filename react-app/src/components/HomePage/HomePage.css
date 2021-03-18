@@ -1,9 +1,6 @@
 .home_body {
   display: flex;
-  /* margin: auto; */
-  margin-top: 60px;
-  margin-bottom: 50px;
-  /* border: 1px solid red; */
+  position: absolute;
   height: 87%;
   width: 100%;
   background-color: #228ffc;
@@ -12,13 +9,12 @@
 .home_column_1 {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid blue; */
   width: 30%;
-  height: 98.5%;
-  /* margin-bottom: 5px; */
+  
+  margin-bottom: 1.5%;
 }
 
-.home_col1_row1 {
+.home_col1_row1 { 
   height: 55%;
   overflow-x: scroll;
 }
@@ -32,16 +28,13 @@
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   border-radius: 2px 2px 0px 0px;
-  /* border-bottom: 3px solid black; */
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
-  /* box-shadow: rgb(0 0 0 / 30%) 0px 10px 5px; */
 }
 
 .home_area_container {
   background-color: white;
   margin-top: 5px;
   margin-left: 10px;
-  /* margin-right: 5px; */
   border-radius: 2px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
   font-family: "Scope One", serif;
@@ -50,7 +43,7 @@
 .home_area_content {
   margin-left: 7px;
   margin-right: 7px;
-  /* margin-top: 7px; */
+  margin-top: 7px;
 }
 
 .home_area_bottom_row {
@@ -59,6 +52,7 @@
 }
 
 .home_area_nav {
+  margin-top: 2.3px;
   color: black;
   font-size: 13px;
 }
@@ -69,35 +63,48 @@
 
 .home_col1_row2 {
   height: 45%;
-}
-
-.home_item_content {
-  height: 88.3%;
   background-color: white;
   margin-top: 10px;
   margin-left: 10px;
-  /* margin-right: 5px; */
   border-radius: 2px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  overflow-y: scroll;
+
 }
 
+/* .home_item_content {
+  
+} */
+
 .home_column_2 {
-  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
   width: 70%;
-  height: 99%;
+  /* height: 100%; */
+  margin-bottom: 1.5%;
+  
 }
 
 .home_col2_row1 {
   height: 75%;
-  margin-left: 11px;
 }
 
 .home_map_container {
   height: 100%;
 }
 .home_col2_row2 {
-  margin-top: 8px;
   height: 25%;
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  overflow-y: scroll;
+}
+
+.home_area_create {
+  height: 100%;
+  /* border: 1px solid red; */
 }
 
 .home_area_span {
@@ -106,8 +113,7 @@
 }
 
 .home_area_content_title {
-  /* font-weight: bolder; */
+  font-weight: bolder;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  /* background-color: #cfe8ef; */
 }

@@ -4,7 +4,7 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }
 
@@ -15,7 +15,7 @@
 .nav_container__center {
   display: flex;
   justify-content: flex-start;
-  width: 28%;
+  width: 37%;
   align-items: center;
   font-family: "Viga", sans-serif;
   font-size: 4rem;

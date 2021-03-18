@@ -171,17 +171,16 @@ const AreaCreate = () => {
             className="area_create_descript"
             placeholder="Share a brief description about this trashed area!"
             maxLength="250"
-            rows="4"
-            cols="40"
+            // rows="4"
+            // cols="40"
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <div className="area_create_col4">
-          <button className="area_create_button" type="submit">
-            TRASHED
-          </button>
+          <div className="trashed_button_title">report this area as trashed:</div>
+          <button className="area_create_button" type="submit">TRASHED</button>
         </div>
       </form>
     </div>

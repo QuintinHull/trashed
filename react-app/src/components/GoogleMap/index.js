@@ -22,36 +22,38 @@ const GoogleMapComponent = () => {
   const iconPath = process.env.NODE_ENV === "production" ? "/static" : "";
 
   return (
-    <GoogleMap
-      defaultZoom={7.6}
-      defaultCenter={{ lat: 20.7984, lng: -157.3319 }}
-      defaultOptions={{ styles: mapStyles }}
-    >
-      {areas &&
-        Object.values(areas).map((area) => (
-          <Marker
-            key={area.id}
-            position={{ lat: area.latitude, lng: area.longitude }}
-            onClick={() => {
-              setSelectedArea(area);
+    <div>
+      <GoogleMap
+        defaultZoom={7.6}
+        defaultCenter={{ lat: 20.7984, lng: -157.3319 }}
+        defaultOptions={{ styles: mapStyles }}
+      >
+        {areas &&
+          Object.values(areas).map((area) => (
+            <Marker
+              key={area.id}
+              position={{ lat: area.latitude, lng: area.longitude }}
+              onClick={() => {
+                setSelectedArea(area);
+              }}
+              icon={{
+                url: `${iconPath}/simpleLogo.svg`,
+                scaledSize: new window.google.maps.Size(35, 35),
+              }}
+            />
+          ))}
+        {selectedArea && (
+          <InfoWindow
+            position={{ lat: selectedArea.latitude, lng: selectedArea.longitude }}
+            onCloseClick={() => {
+              setSelectedArea(null);
             }}
-            icon={{
-              url: `${iconPath}/simpleLogo.svg`,
-              scaledSize: new window.google.maps.Size(35, 35),
-            }}
-          />
-        ))}
-      {selectedArea && (
-        <InfoWindow
-          position={{ lat: selectedArea.latitude, lng: selectedArea.longitude }}
-          onCloseClick={() => {
-            setSelectedArea(null);
-          }}
-        >
-          <div>{selectedArea.address}</div>
-        </InfoWindow>
-      )}
-    </GoogleMap>
+          >
+            <div>{selectedArea.address}</div>
+          </InfoWindow>
+        )}
+      </GoogleMap>
+    </div>
   );
 };
 

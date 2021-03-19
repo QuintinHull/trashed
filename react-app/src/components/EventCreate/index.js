@@ -59,7 +59,7 @@ const EventCreate = ({ singleArea }) => {
           <textarea
             className="event_create_textarea"
             type="text"
-            placeholder="Leave a brief description of your event!"
+            placeholder="leave a brief description of your event"
             required
             maxLength="250"
             value={description}

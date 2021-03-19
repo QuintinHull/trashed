@@ -163,7 +163,7 @@ const AreaCreate = () => {
           <textarea
             required
             className="area_create_descript"
-            placeholder="Share a brief description about this trashed area!"
+            placeholder="share a brief description about this trashed area"
             maxLength="250"
             type="text"
             value={description}

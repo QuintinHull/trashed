@@ -87,7 +87,7 @@ const AreaView = () => {
       <div className="area_view_row2">
         {singleArea && <EventCreate singleArea={singleArea} />}
       </div>
-      { creator && creator.id === singleArea.user_id && 
+      {singleArea && creator && creator.id === singleArea.user_id && 
           <div className="area_view_row3">
           {singleArea && <EditAreaView singleArea={singleArea} />}
         </div>

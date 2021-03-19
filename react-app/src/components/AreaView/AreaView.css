@@ -90,7 +90,7 @@
 }
 
 .area_delete_button_title {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 2px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
   align-self: center;

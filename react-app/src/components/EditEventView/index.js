@@ -4,6 +4,8 @@ import { getEvent } from "../../store/event";
 import { updateEvent } from "../../store/event";
 import { useParams } from "react-router-dom";
 
+import "./EditEventView.css"
+
 const EditEventView = ({ singleEvent }) => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -38,32 +40,40 @@ const EditEventView = ({ singleEvent }) => {
   }
 
   return (
-    <div>
-      <div>---- edit event ----</div>
+    <div className="edit_event_container">
       <form onSubmit={handleSubmit}>
-        <label>title: </label>
-        <input
-          type="text"
-          required
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        ></input>
-        <label>date/time: </label>
-        <input
-          type="datetime-local"
-          required
-          value={dateTime}
-          onChange={(e) => setDateTime(e.target.value)}
-        ></input>
-        <label>description: </label>
-        <textarea
-          type="text"
-          required
-          maxLength="250"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-        <button type="submit">update</button>
+        <div className="event_edit_col1">
+          <input
+            className="edit_event_title"
+            type="text"
+            required
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          ></input>
+        </div>
+        <div className="event_edit_col2">
+          <input
+            className="edit_event_date"
+            type="datetime-local"
+            required
+            value={dateTime}
+            onChange={(e) => setDateTime(e.target.value)}
+          ></input>
+        </div>
+        <div className="event_edit_col3">
+          <textarea
+            className="edit_event_descript"
+            type="text"
+            required
+            maxLength="250"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></textarea>
+        </div>
+        <div className="event_edit_col4">
+          <div className="edit_event_button_title">edit your event:</div>
+          <button className="edit_event_button" type="submit">update</button>
+        </div>
       </form>
     </div>
   );

@@ -1,0 +1,69 @@
+.event_view_container {
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.event_view_title {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding-bottom: 15px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    border-radius: 2px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+}
+
+.event_view_row1 {
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    border-radius: 2px;
+    font-family: "Scope One", serif;
+}
+
+.event_view_descript {
+    align-self: center;
+    text-align: center;
+}
+.event_view_date {
+    margin-top: 3px;
+    align-self: center;
+}
+
+.event_view_row2 {
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    border-radius: 2px;
+    height: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.event_view_row3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;   
+}
+
+.event_delete_button {
+    align-self: center;
+    background-color: #7fc149;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    width: 15%;
+}
+
+.event_delete_button:hover {
+    color: rgb(185, 1, 1);
+  box-shadow: 0px 1px 5px -1px rgb(185, 0, 0);
+}

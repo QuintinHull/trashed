@@ -136,7 +136,7 @@ const EditAreaView = ({ singleArea }) => {
       <form onSubmit={handleSubmit}>
         <div className="area_edit_col1">
           <input
-          className="area_edit_address"
+            className="area_edit_address"
             type="text"
             required
             value={address}
@@ -157,7 +157,7 @@ const EditAreaView = ({ singleArea }) => {
             ))}
           </select>
           <input
-          className="area_edit_zip"
+            className="area_edit_zip"
             type="number"
             value={zipcode}
             onChange={(e) => setZipcode(e.target.value)}
@@ -165,7 +165,7 @@ const EditAreaView = ({ singleArea }) => {
         </div>
         <div className="area_edit_col3">
           <textarea
-          className="area_edit_descript"
+            className="area_edit_descript"
             maxLength="250"
             type="text"
             value={description}

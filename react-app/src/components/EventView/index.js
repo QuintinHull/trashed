@@ -23,13 +23,21 @@ const EventView = () => {
   };
 
   return (
-    <div>
-      <div>{singleEvent && singleEvent.title}</div>
-      <div>{singleEvent && singleEvent.date_time}</div>
-      <div>{singleEvent && singleEvent.description}</div>
-      {singleEvent && <EditEventView singleEvent={singleEvent} />}
-      <div> ---- delete event ---- </div>
-      <button onClick={() => handleDelete(singleEvent.id)}>remove</button>
+    <div className="event_view_container">
+
+      <div className="event_view_title">{singleEvent && singleEvent.title}</div>
+      <div className="event_view_row1">
+        <div className="event_view_descript">{singleEvent && singleEvent.description}</div>
+        <div className="event_view_date">{singleEvent && singleEvent.date_time}</div>
+
+      </div>
+      <div className="event_view_row2">
+        {singleEvent && <EditEventView singleEvent={singleEvent} />}
+
+      </div>
+      <div className="event_view_row3">
+        <button className="event_delete_button" onClick={() => handleDelete(singleEvent.id)}>remove</button>
+      </div>
     </div>
   );
 };

@@ -40,7 +40,7 @@ const ItemView = () => {
                       <span className="item_span">author: </span>
                       {item.first_name} {item.last_name}
                     </div>
-                    {creator && creator.id === item.user_id && 
+                    {creator && creator?.id === item.user_id && 
                       <NavLink className="type_link" key={item.id} to={`/item/${item.id}`}>
                         edit
                       </NavLink>

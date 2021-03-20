@@ -17,6 +17,7 @@ const SearchBar = () => {
     e.preventDefault();
     dispatch(searchAreas(city));
     history.push(`/locate?city=${city}`);
+    setCity("")
   };
 
   const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";

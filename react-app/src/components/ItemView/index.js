@@ -12,7 +12,7 @@ const ItemView = () => {
   const dispatch = useDispatch();
 
   const typeItems = useSelector((state) => state.items.all_type_items);
-  // const creator = useSelector((state) => state.session.user);
+  const creator = useSelector((state) => state.session.user);
 
   useEffect(() => {
     dispatch(getTypeItems(id));
@@ -40,9 +40,11 @@ const ItemView = () => {
                       <span className="item_span">author: </span>
                       {item.first_name} {item.last_name}
                     </div>
-                    <NavLink className="type_link" key={item.id} to={`/item/${item.id}`}>
-                      edit
-                    </NavLink>
+                    {creator && creator.id === item.user_id && 
+                      <NavLink className="type_link" key={item.id} to={`/item/${item.id}`}>
+                        edit
+                      </NavLink>
+                    }  
                   </div>  
                   <hr></hr>
                 </div>

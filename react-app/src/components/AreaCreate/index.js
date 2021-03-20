@@ -117,6 +117,11 @@ const AreaCreate = () => {
     const addedArea = dispatch(createArea(newArea));
     dispatch(getAreas());
     setNewArea(addedArea);
+
+    setAddress("")
+    setCity("")
+    setZipcode("")
+    setDescription("")
   };
 
   return (

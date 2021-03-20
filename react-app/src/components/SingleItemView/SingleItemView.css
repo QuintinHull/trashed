@@ -1,0 +1,42 @@
+.single_item_container {
+    border: 1px solid black;
+}
+
+.single_item_row1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 80%;
+}
+
+.single_item_name {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.single_item_descript {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-family: "Scope One", serif;
+}
+
+.single_item_row2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5px;
+    height: 60px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 70%;
+    
+}

@@ -9,20 +9,23 @@
 }
 
 .nav_container__left {
+  width: 30%;
   display: flex;
   align-items: center;
 }
 .nav_container__center {
   display: flex;
-  justify-content: flex-start;
-  width: 37%;
+  justify-content: center;
+  width: 40%;
   align-items: center;
   font-family: "Viga", sans-serif;
   font-size: 4rem;
 }
 
 .nav_container__right {
+  width: 30%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   margin-right: 1rem;
 }

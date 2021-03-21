@@ -1,7 +1,3 @@
-.single_item_container {
-    border: 1px solid black;
-}
-
 .single_item_row1 {
     display: flex;
     flex-direction: column;
@@ -37,6 +33,28 @@
     background-color: white;
     border-radius: 2px;
     box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
-    width: 70%;
-    
+    width: 70%;   
+}
+
+.single_item_row3 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.single_item_row3 button {
+    align-self: center;
+    margin: auto;
+    background-color: #7fc149;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    width: 15%;
+}
+
+.single_item_row3 button:hover {
+    color: rgb(185, 1, 1);
+    box-shadow: 0px 1px 5px -1px rgb(185, 0, 0);
 }

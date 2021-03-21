@@ -1,9 +1,9 @@
-.item_create_container {
+.item_edit_container {
     display: flex;
     height: 99%;
 }
 
-.item_create_container form {
+.item_edit_container form {
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
@@ -12,25 +12,24 @@
     justify-content: space-between;
 }
 
-.item_create_col1 {
+.item_edit_col1 {
     display: flex;
     width: 25%;
 }
 
-.item_create_col2 {
+.item_edit_col2 {
     display: flex;
     width: 50%;
 }
 
-.item_create_col3 {
-    /* align-self: center; */
+.item_edit_col3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 10%;
 }
 
-.item_create_title {
+.item_edit_title {
     align-self: center;
     background-color: #cfe8ef;
     border: none;
@@ -41,7 +40,7 @@
     height: 48%;
 }
 
-.item_create_descript {
+.item_edit_descript {
     display: flex;
     align-self: center;
     background-color: #cfe8ef;
@@ -54,15 +53,14 @@
     resize: none;
 }
 
-.item_create_button_title {
+.item_edit_button_title {
     align-self: center;
     text-align: center;
-    /* width: 99%; */
     font-family: "Poppins", sans-serif;
     font-size: .7rem;
 }
 
-.item_create_col3 button {
+.item_edit_col3 button {
     align-self: center;
     height: 25px;
     width: 90%;
@@ -71,10 +69,10 @@
     background-color: #7fc149;
     font-family: "Poppins", sans-serif;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.item_create_col3 button:hover {
+.item_edit_col3 button:hover {
     color: #228ffc;
     box-shadow: 0.5px 0.5px 1px #228ffc;
 }

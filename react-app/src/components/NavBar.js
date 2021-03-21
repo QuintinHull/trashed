@@ -34,11 +34,11 @@ const NavBar = ({ authenticated, setAuthenticated }) => {
         <div>TRASHED</div>
       </div>
       <div className="nav_container__right">
-        {/* <NavLink to="/login" exact={true} activeClassName="active">
-          <button className="navbar_links navbar_links1">login</button>
+        <NavLink to="/about-trashed" exact={true} activeClassName="active">
+          <button className="navbar_links navbar_links1">about</button>
         </NavLink>
 
-        <NavLink to="/sign-up" exact={true} activeClassName="active">
+        {/* <NavLink to="/sign-up" exact={true} activeClassName="active">
           <button className="navbar_links navbar_links2">sign up</button>
         </NavLink> */}
 

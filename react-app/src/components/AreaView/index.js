@@ -17,7 +17,7 @@ const AreaView = () => {
 
   const singleArea = useSelector((state) => state.areas.area);
   // const areaEvents = useSelector((state) => state.events.all_area_events);
-  // const creator = useSelector((state) => state.session.user);
+  const creator = useSelector((state) => state.session.user);
 
   // console.log(singleArea?.id);
 
@@ -87,11 +87,14 @@ const AreaView = () => {
       <div className="area_view_row2">
         {singleArea && <EventCreate singleArea={singleArea} />}
       </div>
-      <div className="area_view_row3">
-        {singleArea && <EditAreaView singleArea={singleArea} />}
-      </div>
+      {singleArea && creator && creator.id === singleArea.user_id && 
+          <div className="area_view_row3">
+          {singleArea && <EditAreaView singleArea={singleArea} />}
+        </div>
+      }
       <div className="area_view_row4">
-        <button onClick={() => handleDelete(singleArea.id)}>cleaned</button>
+        {/* <div className="area_delete_button_title">remove this area by marking it clean:</div> */}
+        <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button>
       </div>
     </div>
   );

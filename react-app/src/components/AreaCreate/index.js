@@ -117,6 +117,11 @@ const AreaCreate = () => {
     const addedArea = dispatch(createArea(newArea));
     dispatch(getAreas());
     setNewArea(addedArea);
+
+    setAddress("")
+    setCity("")
+    setZipcode("")
+    setDescription("")
   };
 
   return (
@@ -131,8 +136,6 @@ const AreaCreate = () => {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           ></input>
-
-          {/* <label>city: </label> */}
           <input
             className="area_create_city"
             type="text"
@@ -143,7 +146,6 @@ const AreaCreate = () => {
           ></input>
         </div>
         <div className="area_create_col2">
-          {/* <label>state: </label> */}
           <select
             className="area_create_state"
             value={state}
@@ -153,8 +155,6 @@ const AreaCreate = () => {
               <option key={state}>{state}</option>
             ))}
           </select>
-
-          {/* <label>zipcode: </label> */}
           <input
             required
             className="area_create_zip"
@@ -165,21 +165,18 @@ const AreaCreate = () => {
           ></input>
         </div>
         <div className="area_create_col3">
-          {/* <label>description: </label> */}
           <textarea
             required
             className="area_create_descript"
-            placeholder="Share a brief description about this trashed area!"
+            placeholder="share a brief description about this trashed area"
             maxLength="250"
-            // rows="4"
-            // cols="40"
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <div className="area_create_col4">
-          <div className="trashed_button_title">report this area as trashed:</div>
+          <div className="trashed_button_title">report this area as:</div>
           <button className="area_create_button" type="submit">TRASHED</button>
         </div>
       </form>

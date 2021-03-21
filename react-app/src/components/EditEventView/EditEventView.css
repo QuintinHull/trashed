@@ -1,0 +1,94 @@
+.edit_event_container {
+    display: flex;
+    height: 99%;
+    margin-top: 5px;
+}
+
+.edit_event_container form {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event_edit_col1 {
+    width: 25%;
+    display: flex;
+}
+
+.event_edit_col2 {
+    width: 25%;
+    display: flex;
+}
+
+.event_edit_col3 {
+    width: 35%;
+    display: flex;
+}
+
+.event_edit_col4 {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_event_title {
+    align-self: center;
+    background-color: #cfe8ef;
+    border: none;
+    border-radius: 7px;
+    font-family: "Scope One", serif;
+    font-size: 15px;
+    width:90%;
+    height: 48%;
+}
+
+.edit_event_date {
+    align-self: center;
+    background-color: #cfe8ef;
+    border: none;
+    border-radius: 7px;
+    font-family: "Scope One", serif;
+    font-size: 15px;
+    width:90%;
+    height: 50%;
+}
+
+.edit_event_descript {
+    display: flex;
+    align-self: center;
+    background-color: #cfe8ef;
+    border: none;
+    border-radius: 7px;
+    font-family: "Scope One", serif;
+    font-size: 0.75rem;
+    width: 95%;
+    height:75%;
+    resize: none;
+}
+
+.edit_event_button_title {
+    align-self: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: .6rem;
+}
+
+.edit_event_button {
+    align-self: center;
+    height: 20px;
+    width: 95%;
+    text-decoration: none;
+    border: none;
+    background-color: #7fc149;
+    font-family: "Poppins", sans-serif;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.edit_event_button:hover {
+    color: #228ffc;
+    box-shadow: 0.5px 0.5px 1px #228ffc;
+}

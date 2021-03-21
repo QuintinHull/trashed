@@ -1,0 +1,60 @@
+.search_results_title {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    margin: auto;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    width: 60%;
+}
+
+.search_results_body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.search_results_card {
+    align-self: center;
+    width: 60%;
+    background-color: white;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    margin-top: 5px;
+    font-family: "Scope One", serif;
+}
+
+.s_r_card_info {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.s_r_card_title {
+    font-weight: bolder;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.search_result_span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.s_r_bottom_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_result_nav {
+    color: rgb(110, 110, 110);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.search_result_nav:hover {
+    color: #228ffc;
+}

@@ -10,6 +10,7 @@ const AreaEventView = ({ singleArea }) => {
   // console.log(singleArea.id);
 
   const areaEvents = useSelector((state) => state.events.all_area_events);
+  const creator = useSelector((state) => state.session.user);
 
   useEffect(() => {
     dispatch(getAreaEvents(singleArea?.id));
@@ -24,22 +25,24 @@ const AreaEventView = ({ singleArea }) => {
             <div className="area_events_card" key={event.id}>
               <div className="area_events_card_title">{event.title}</div>
               <div>{event.description}</div>
-              <div>
-                <span className="area_event_span">event date: </span>
-                {event.date_time}
-              </div>
+                <div>
+                  <span className="area_event_span">reported by: </span>
+                  {event.first_name} {event.last_name}
+                </div>
               <div>
                 <div className="area_event_bottom_row">
                   <div>
-                    <span className="area_event_span">reported by: </span>
-                    {event.first_name} {event.last_name}
+                    <span className="area_event_span">event date: </span>
+                    {event.date_time}
                   </div>
-                  <NavLink
-                    className="area_event_link"
-                    to={`/event/${event.id}`}
-                  >
-                    details
-                  </NavLink>
+                  {creator && creator.id === event.user_id && 
+                    <NavLink
+                      className="area_event_link"
+                      to={`/event/${event.id}`}
+                    >
+                      edit
+                    </NavLink>
+                  }
                 </div>
               </div>
               <hr></hr>

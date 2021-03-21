@@ -1,6 +1,10 @@
 .area_events_card {
   /* background-color: white; */
   margin-top: 5px;
+  margin-right: 9px;
+  margin-left: 9px;
+  font-family: "Scope One", serif;
+  font-size: .9rem;
 }
 
 .area_event_span {
@@ -21,8 +25,9 @@
 }
 
 .area_event_link {
-  color: black;
-  font-size: 14px;
+  color: rgb(110, 110, 110);
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .area_event_link:hover {

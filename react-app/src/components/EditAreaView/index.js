@@ -5,6 +5,8 @@ import Geocode from "react-geocode";
 import { updateArea } from "../../store/area";
 import { useParams } from "react-router-dom";
 
+import "./EditAreaView.css"
+
 const EditAreaView = ({ singleArea }) => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -130,43 +132,50 @@ const EditAreaView = ({ singleArea }) => {
   }
 
   return (
-    <div>
-      <div> ---- edit area ---- </div>
+    <div className="edit_area_container">
       <form onSubmit={handleSubmit}>
-        <label>address: </label>
-        <input
-          type="text"
-          required
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        ></input>
-        <label>city: </label>
-        <input
-          type="text"
-          required
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        ></input>
-        <label>state: </label>
-        <select value={state} onChange={(e) => setState(e.target.value)}>
-          {states.map((state) => (
-            <option key={state}>{state}</option>
-          ))}
-        </select>
-        <label>zipcode: </label>
-        <input
-          type="number"
-          value={zipcode}
-          onChange={(e) => setZipcode(e.target.value)}
-        ></input>
-        <label>description: </label>
-        <textarea
-          maxLength="250"
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-        <button type="submit">update</button>
+        <div className="area_edit_col1">
+          <input
+            className="area_edit_address"
+            type="text"
+            required
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          ></input>
+          <input
+          className="area_edit_city"
+            type="text"
+            required
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          ></input>
+        </div>
+        <div className="area_edit_col2">
+          <select className="area_edit_state" value={state} onChange={(e) => setState(e.target.value)}>
+            {states.map((state) => (
+              <option key={state}>{state}</option>
+            ))}
+          </select>
+          <input
+            className="area_edit_zip"
+            type="number"
+            value={zipcode}
+            onChange={(e) => setZipcode(e.target.value)}
+          ></input>
+        </div>
+        <div className="area_edit_col3">
+          <textarea
+            className="area_edit_descript"
+            maxLength="250"
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></textarea>
+        </div>
+        <div className="area_edit_col4">
+          <div className="edit_trashed_button_title">edit your area:</div>
+          <button className="area_edit_button" type="submit">update</button>
+        </div>
       </form>
     </div>
   );

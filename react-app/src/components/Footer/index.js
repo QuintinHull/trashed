@@ -9,7 +9,7 @@ const Footer = () => {
       <a href="https://github.com/QuintinHull/trashed" className="foot_github">
         {<img src={`${imagePath}/gitHubMark.png`} alt="github logo"></img>}
       </a>
-      <a href="www.linkedin.com/in/quintinhull92" className="foot_linkedin">
+      <a href="https://www.linkedin.com/in/quintinhull92/" className="foot_linkedin">
         {<img src={`${imagePath}/linkedIn.png`} alt="linkedin logo"></img>}
       </a>
     </div>

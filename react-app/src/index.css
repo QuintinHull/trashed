@@ -5,10 +5,10 @@ html {
 body {
   margin: 0;
   min-height: 760px;
-  /* min-width: 1000px;
-  max-width: 2000px;
+  min-width: 1000px;
+  /* max-width: 2000px; */
   /* max-width: 1920px; */
-  /* max-height: 800px; */
+  /* max-height: 500px; */
   height: 100%;
 }
 

@@ -4,6 +4,8 @@ import { useHistory, useParams } from "react-router-dom";
 import { deleteItem, getItem } from "../../store/item";
 import EditItemView from "../EditItemView";
 
+import "./SingleItemView.css"
+
 const SingleItemView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -20,13 +22,17 @@ const SingleItemView = () => {
   };
 
   return (
-    <div>
-      <div> ---- single item view ---- </div>
-      <div>{singleItem && singleItem.name}</div>
-      <div>{singleItem && singleItem.description}</div>
-      {singleItem && <EditItemView singleItem={singleItem} />}
-      <div> ---- delete item ---- </div>
-      <button onClick={() => handleDelete(singleItem.id)}>remove</button>
+    <div className="single_item_container">
+      <div className="single_item_row1">
+        <div className="single_item_name">{singleItem && singleItem.name}</div>
+        <div className="single_item_descript">{singleItem && singleItem.description}</div>
+      </div>
+      <div className="single_item_row2">
+        {singleItem && <EditItemView singleItem={singleItem} />}
+      </div>
+      <div className="single_item_row3">
+        <button onClick={() => handleDelete(singleItem.id)}>remove</button>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,130 @@
+.about_container {
+    margin-top: 10px;
+}
+
+.about_row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about_col1 {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.about_col2 {
+    display: flex;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px; 
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+}
+
+.about_col2 div {
+    align-self: center;
+    margin: 10px;
+}
+
+.about_image {
+    height: 200px;
+}
+
+.about_row2 {
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    /* justify-content: center; */
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 818px;
+    padding: 10px;
+    font-family: "Scope One", serif;
+}
+
+.about_row2 div {
+   margin-left: 10px;
+}
+
+.about_row2 span {
+    font-family: "Viga", sans-serif;
+    font-size: 1.1rem;
+}
+
+.about_row3 {
+    margin:auto;
+    margin-top: 5px;
+    width: 838px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about_row3_col1 {
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 50px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 32.9%;
+    color: #7fc149;
+}
+
+.about_row3_col2 {
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 50px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 32.9%;
+    color: #7fc149
+}
+.about_row3_col3 {
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 50px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    width: 32.9%;
+    color: #7fc149
+}
+
+.about_row4 {
+    font-style: italic;
+    height: 30px;
+    padding-top: 10px;
+    font-family: "Scope One", serif;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5px;
+    width: 838px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+}
+
+.aa_span {
+    color: red;
+    /* font-family: "Poppins", sans-serif; */
+    font-size: 1rem;
+    font-weight: bolder;
+}

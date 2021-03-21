@@ -28,7 +28,7 @@ const TypeView = () => {
               to={`type/${type.id}`}
             >
               <img src={`${imagePath}/carousel_${type.id}.svg`} alt="category"></img>
-              <div className="type_name">{type.name}</div>
+              <div className="type_name">{type.name.toLowerCase()}</div>
             </NavLink>
           ))}
       </div>

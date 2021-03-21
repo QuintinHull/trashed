@@ -18,6 +18,7 @@ import ItemView from "./components/ItemView";
 import TypeView from "./components/TypeView";
 import SingleItemView from "./components/SingleItemView";
 import Footer from "./components/Footer";
+import About from "./components/About"
 
 const store = configureStore();
 
@@ -54,6 +55,9 @@ function App() {
               authenticated={authenticated}
               setAuthenticated={setAuthenticated}
             />
+          </Route>
+          <Route path="/about-trashed" exact={true}>
+            <About />
           </Route>
           <Route path="/sign-up" exact={true}>
             <SignUpForm

@@ -1,6 +1,6 @@
 # Trashed is an organizational tool to help users keep their communities clean. 
 
-<h2>Try the site live: <a href=https://trash-ed.herokuapp.com/login//>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
+<h2>Try the site live: <a href=https://trash-ed.herokuapp.com/login/>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
 
 [![Screen-Shot-2021-03-23-at-6-38-18-PM.png](https://i.postimg.cc/DfxBbYSk/Screen-Shot-2021-03-23-at-6-38-18-PM.png)](https://postimg.cc/z3Rns7w0)
 

@@ -3,18 +3,22 @@
   position: absolute;
   height: 87%;
   width: 100%;
+  min-width: 1000px;
+  max-height: 1000px;
   background-color: #228ffc;
 }
 
 .home_column_1 {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 30%;
   margin-bottom: 1.5%;
+  min-width: 400px;
 }
 
 .home_col1_row1 { 
-  height: 55%;
+  /* height: 55%; */
   overflow-x: scroll;
 }
 
@@ -61,14 +65,15 @@
 }
 
 .home_col1_row2 {
-  height: 45%;
+  /* height: 45%; */
   background-color: white;
   margin-top: 10px;
   margin-left: 10px;
   border-radius: 2px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
-  overflow-y: scroll;
-
+  /* overflow-x: scroll; */
+  min-height: 260px;
+  overflow-x: hidden;
 }
 
 .home_column_2 {
@@ -76,7 +81,7 @@
   flex-direction: column;
   width: 70%;
   margin-bottom: 1.5%;
-  
+  min-width: 500px;
 }
 
 .home_col2_row1 {

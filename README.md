@@ -1,12 +1,10 @@
 # Trashed
 
-----
 
 **Trashed** is an organizational tool to help users keep their communities clean of misplaced trash. 
 
 <h2>Try the site live: <a href=https://trash-ed.herokuapp.com//>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
 
-----
 
 ## Technologies used in Trashed
 
@@ -32,8 +30,6 @@
 
 **Heroku** 
 
-----
-
 ## Features implemented
 
 * Users can **log in** or **sign up** to access the site.
@@ -44,7 +40,6 @@
 * A user can only **edit** an area, event, or tip that they created.
 * A user can only **delete** an event or tip that they created.
 
-----
 
 ## Challenges
 Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.

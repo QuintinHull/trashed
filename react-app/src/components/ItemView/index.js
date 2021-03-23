@@ -6,6 +6,7 @@ import ItemCreate from "../ItemCreate";
 import { NavLink, useParams } from "react-router-dom";
 
 import "./ItemView.css"
+import { currentUser } from "../../store/session";
 
 const ItemView = () => {
   const { id } = useParams();
@@ -15,6 +16,7 @@ const ItemView = () => {
   const creator = useSelector((state) => state.session.user);
 
   useEffect(() => {
+    dispatch(currentUser());
     dispatch(getTypeItems(id));
   }, [dispatch, id]);
 

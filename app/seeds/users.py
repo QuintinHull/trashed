@@ -8,10 +8,22 @@ def seed_users():
                 email='demo@aa.io', password='password')
     
     quintin = User(first_name="Quintin", last_name="Hull", 
-                    email="quintinhull92@gmail.com", password='password')            
+                    email="quintinhull92@gmail.com", password='password')
+
+    olivia = User(first_name="Olivia", last_name="Jones",
+                    email="olivia21@gmail.com", password='passOJ21')
+
+    tito = User(first_name="Tito", last_name="Makani",
+                    email="tito@shoreshack.com", password="alohatothat")
+
+    reggie = User(first_name="Reggie", last_name="Smoove",
+                    email="smoovereg@gmail.com", password="smoove24")                            
 
     db.session.add(demo)
     db.session.add(quintin)
+    db.session.add(olivia)
+    db.session.add(tito)
+    db.session.add(reggie)
 
     db.session.commit()
 

@@ -37,10 +37,13 @@
 .home_area_container {
   background-color: white;
   margin-top: 5px;
+  /* padding: 5px; */
+  /* margin-bottom: 5px; */
   margin-left: 10px;
   border-radius: 2px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
   font-family: "Scope One", serif;
+  /* height: 120px; */
 }
 
 .home_area_content {

@@ -136,3 +136,5 @@ Implementing Geocode to obtain the latitude and longitude of each created area p
    ```
 
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
+
+[![logo-with-name.png](https://i.postimg.cc/507LjTns/logo-with-name.png)](https://postimg.cc/G8DH570D)

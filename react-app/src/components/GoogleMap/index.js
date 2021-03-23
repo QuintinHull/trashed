@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, withRouter } from "react-router-dom";
 import {
   GoogleMap,
   withScriptjs,
@@ -66,7 +66,7 @@ const GoogleMapComponent = () => {
                 </div>
                 <div className="i_w_col2_row3">
                   <div><span>reported by: </span>{selectedArea.first_name} {selectedArea.last_name}</div>
-                  {/* <NavLink className="info_window_link" to={`/area/${selectedArea.id}`}>details</NavLink> */}
+                  {/* <Link className="info_window_link" to={`/area/${selectedArea.id}`}>details</Link> */}
                 </div>
               </div>
             </div>
@@ -77,4 +77,4 @@ const GoogleMapComponent = () => {
   );
 };
 
-export const WrappedGoogleMap = withScriptjs(withGoogleMap(GoogleMapComponent));
+export const WrappedGoogleMap = withRouter(withScriptjs(withGoogleMap(GoogleMapComponent)));

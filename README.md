@@ -40,7 +40,7 @@
 
 
 ## Challenges
-Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
+Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. The challenge I found was coming up with a way to use Geocode that would send back the latitude and longitude before the post request was sent to the back end. For my solution I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
 
 [![Screen-Shot-2021-03-23-at-6-36-47-PM.png](https://i.postimg.cc/X78GvTqd/Screen-Shot-2021-03-23-at-6-36-47-PM.png)](https://postimg.cc/WhdbWYM1)
 

@@ -1,5 +1,3 @@
-# [![logo-with-name.png](https://i.postimg.cc/507LjTns/logo-with-name.png)](https://postimg.cc/G8DH570D)
-
 # Trashed is an organizational tool to help users keep their communities clean. 
 
 <h2>Try the site live: <a href=https://trash-ed.herokuapp.com//>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
@@ -43,6 +41,8 @@
 
 ## Challenges
 Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
+
+[![Screen-Shot-2021-03-23-at-6-36-47-PM.png](https://i.postimg.cc/X78GvTqd/Screen-Shot-2021-03-23-at-6-36-47-PM.png)](https://postimg.cc/WhdbWYM1)
 
 ## Getting started
 

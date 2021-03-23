@@ -1,3 +1,49 @@
+# Trashed
+
+----
+
+**Trashed** is an organizational tool for users who want to help keep their communities clean. 
+
+<h2>Try the site live: <a href=https://trash-ed.herokuapp.com//>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
+
+## Technologies used in Trashed
+
+**JavaScript**
+
+**Python**
+
+**SQLAlchemy**
+
+**Flask** 
+
+**React**
+
+**Redux**
+
+**Google Maps API**
+
+**Geocode API**
+
+**CSS**
+
+**Docker**
+
+**Heroku** 
+
+## Features implemented
+
+* Users can **log in** or **sign up** to access the site.
+* A user has the ability to **report a trashed area** that displays on Google Map.
+* A user has the ability to **organize clean up events** for a trashed area.
+* The **search** bar can locate using a case insensitive search term and display results to the user.
+* A user has the ability to **post tips** to share different ways to reduce waste at home.
+* A user can only **edit** an area, event, or tip that they created.
+* A user can only **delete** an event or tip that they created.
+
+
+## Challenges
+Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
+
 # Flask React Project
 
 This is the backend for the Flask React project.

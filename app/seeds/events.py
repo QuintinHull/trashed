@@ -9,13 +9,13 @@ def seed_events():
                     area_id=1, user_id=1)
     
     event_3 = Event(title="Ewa Makai Middle School", date_time="2021-04-07 09:00:00", description="Our Ewa Makai eighth graders are spending a day in April cleaning up White Plains Beach.",
-                    area_id=1, user_id=2)
+                    area_id=1, user_id=5)
 
     event_4 = Event(title="Fanciscan Vistas Apartments", date_time="2021-04-12 07:15:00", description="Some of us at Franciscan Vistas Ewa Apartments are going to meet up before work and pick up trash at Asing Park. Always need help!",
                     area_id=2, user_id=3)
 
     event_5 = Event(title="Service Hours", date_time="2021-04-15 12:00:00", description="I need to get more service hours for school so I'll be picking up trash at the park over lunch.",
-                    area_id=3, user_id=1)
+                    area_id=2, user_id=1)
 
     event_6 = Event(title="Lewers Lounge Staff", date_time="2021-04-27 08:30:00", description="The staff at Lewers Lounge is going to be taking the morning off to clean up our surrounding area. If anyone is interested don't hesitate to join us!",
                     area_id=3, user_id=1)

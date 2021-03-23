@@ -11,7 +11,7 @@ def seed_areas():
     area_4 = Area(address="Lower Saki Mana Rd", city="Waimea", state="HI", zipcode="96796", description="Polihale State Park", clean=False, latitude=22.0795, 
                 longitude=-159.7648, created_at="2021-04-01 07:03:12", user_id="1")            
     area_5 = Area(address="200 W. Kawili St", city="Hilo", state="HI", zipcode="96720", description="Campus of University of Hawaii at Hilo", clean=False, latitude=19.7018462, 
-                longitude=-155.0791607, created_at="2021-04-01 07:27:44", user_id="2")            
+                longitude=-155.0791607, created_at="2021-04-01 07:27:44", user_id="3")            
     area_6 = Area(address="Kahekili Hwy", city="Wailuku", state="HI", zipcode="96793", description="Waihee Ridge Trail", clean=False, latitude=20.9529, 
                 longitude=-156.5316, created_at="2021-04-12 13:45:29", user_id="4")            
     area_7 = Area(address="6600 Makena Alanui", city="Kihei", state="HI", zipcode="96753", description="Makena Beach", clean=False, latitude=20.6316, 
@@ -23,6 +23,7 @@ def seed_areas():
 
     db.session.add(area_1)            
     db.session.add(area_2)            
+    db.session.add(area_3)
     db.session.add(area_4)
     db.session.add(area_5)
     db.session.add(area_6)

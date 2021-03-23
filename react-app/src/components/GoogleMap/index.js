@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink, Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import {
   GoogleMap,
   withScriptjs,
@@ -8,6 +8,7 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
+import InfoWindowComponent from "../InfoWindowComponent"
 import mapStyles from "./mapStyles";
 import { getAreas } from "../../store/area";
 
@@ -27,8 +28,8 @@ const GoogleMapComponent = () => {
   return (
     <div>
       <GoogleMap
-        defaultZoom={7.6}
-        defaultCenter={{ lat: 20.7984, lng: -157.3319 }}
+        defaultZoom={7.55}
+        defaultCenter={{ lat: 20.8999, lng: -157.4700 }}
         defaultOptions={{ styles: mapStyles }}
       >
         {areas &&
@@ -53,23 +54,7 @@ const GoogleMapComponent = () => {
               setSelectedArea(null);
             }}
           >
-            <div className="info_window_body">
-              <div className="info_window_col1">
-                <img src={`${iconPath}/simpleLogo.svg`}></img>
-              </div>
-              <div className="info_window_col2">
-                <div className="i_w_col2_row1">
-                  <div>{selectedArea.address}</div>
-                </div>
-                <div className="i_w_col2_row2">
-                  <div><span>reported on: </span>{selectedArea.created_at}</div>
-                </div>
-                <div className="i_w_col2_row3">
-                  <div><span>reported by: </span>{selectedArea.first_name} {selectedArea.last_name}</div>
-                  {/* <Link className="info_window_link" to={`/area/${selectedArea.id}`}>details</Link> */}
-                </div>
-              </div>
-            </div>
+            <InfoWindowComponent selectedArea={selectedArea} />
           </InfoWindow>
         )}
       </GoogleMap>

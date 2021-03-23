@@ -32,6 +32,8 @@
 
 .about_image {
     height: 200px;
+    padding-top: 3px;
+    border-radius: 20px;
 }
 
 .about_row2 {

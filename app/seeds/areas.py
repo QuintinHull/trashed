@@ -12,16 +12,14 @@ def seed_areas():
                 longitude=-159.7648, created_at="2021-04-01 07:03:12", user_id="1")            
     area_5 = Area(address="200 W. Kawili St", city="Hilo", state="HI", zipcode="96720", description="Campus of University of Hawaii at Hilo", clean=False, latitude=19.7018462, 
                 longitude=-155.0791607, created_at="2021-04-01 07:27:44", user_id="2")            
-    area_6 = Area(address="", city="", state="HI", zipcode="", description="", clean=False, latitude=, 
-                longitude=-, created_at="", user_id="4")            
-    area_7 = Area(address="", city="", state="HI", zipcode="", description="", clean=False, latitude=, 
-                longitude=-, created_at="", user_id="1")            
-    area_8 = Area(address="", city="", state="HI", zipcode="", description="", clean=False, latitude=, 
-                longitude=-, created_at="", user_id="2")            
-    area_9 = Area(address="", city="", state="HI", zipcode="", description="", clean=False, latitude=, 
-                longitude=-, created_at="", user_id="5")            
-    area_10 = Area(address="", city="", state="HI", zipcode="", description="", clean=False, latitude=, 
-                longitude=-, created_at="", user_id="3")            
+    area_6 = Area(address="Kahekili Hwy", city="Wailuku", state="HI", zipcode="96793", description="Waihee Ridge Trail", clean=False, latitude=20.9529, 
+                longitude=-156.5316, created_at="2021-04-12 13:45:29", user_id="4")            
+    area_7 = Area(address="6600 Makena Alanui", city="Kihei", state="HI", zipcode="96753", description="Makena Beach", clean=False, latitude=20.6316, 
+                longitude=-156.4448, created_at="2021-04-25 10:31:00", user_id="1")            
+    area_8 = Area(address="Kaahumanu Pl", city="Kailua-Kona", state="HI", zipcode="96740", description="Kailua Pier", clean=False, latitude=19.6400, 
+                longitude=-155.9969, created_at="2021-04-25 14:12:01", user_id="2")            
+    area_9 = Area(address="Mauna Kea Summit Rd", city="Hilo", state="HI", zipcode="96720", description="Lake Waiau Parking Lot", clean=False, latitude=19.810409, 
+                longitude=-155.46768, created_at="2021-04-27 08:28:55", user_id="5")
 
     db.session.add(area_1)            
     db.session.add(area_2)            
@@ -31,7 +29,6 @@ def seed_areas():
     db.session.add(area_7)
     db.session.add(area_8)
     db.session.add(area_9)
-    db.session.add(area_10)
 
     db.session.commit()
 

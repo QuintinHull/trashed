@@ -24,7 +24,7 @@ function Delete() {
     <div className="delete_modal_container">
         <div className="delete_title">
           <div>
-            Once this item is deleted, it cannot be undone.
+            Once this area is deleted, it cannot be undone.
           </div>
           <div>
             Are you certain you want to continue?

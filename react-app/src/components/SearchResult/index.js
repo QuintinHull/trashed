@@ -24,14 +24,14 @@ const SearchResult = () => {
     return area_array.map((area) => (
       <div className="search_results_card" key={area && area.id}>
         <div className="s_r_card_info">
-          <div className="s_r_card_title">{area && area.description}</div>
+          <div className="s_r_card_title">{area && area.first_name} {area && area.last_name}</div>
           <div>
             <span className="search_result_span">location: </span>
             {area && area.address} {area && area.city}, {area && area.state} {area && area.zipcode}
           </div>
           <div>
             <span className="search_result_span">reported by: </span>
-            {area && area.description}
+            {area && area.}
           </div>
           <div className="s_r_bottom_row">
             <div>

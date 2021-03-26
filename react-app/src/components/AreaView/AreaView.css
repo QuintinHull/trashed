@@ -48,11 +48,11 @@
 }
 
 .area_view_row4 {
-  margin-top: 1%;
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* align-content: center; */
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .a_v_row1_col1 {

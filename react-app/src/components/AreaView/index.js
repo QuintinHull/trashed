@@ -7,6 +7,7 @@ import { currentUser } from "../../store/session";
 import EditAreaView from "../EditAreaView";
 import EventCreate from "../EventCreate";
 import AreaEventView from "../AreaEventView";
+import DeleteAreaModal from "../DeleteAreaModal";
 
 import "./AreaView.css";
 
@@ -94,7 +95,8 @@ const AreaView = () => {
       }
       <div className="area_view_row4">
         {/* <div className="area_delete_button_title">remove this area by marking it clean:</div> */}
-        <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button>
+        <DeleteAreaModal />
+        {/* <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button> */}
       </div>
     </div>
   );

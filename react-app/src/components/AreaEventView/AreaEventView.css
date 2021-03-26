@@ -26,8 +26,9 @@
 
 .area_event_link {
   color: rgb(110, 110, 110);
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 5px;
+  margin-left: 10px;
 }
 
 .area_event_link:hover {

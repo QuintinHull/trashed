@@ -48,11 +48,9 @@
 }
 
 .area_view_row4 {
-  margin-top: 1%;
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
-  /* align-content: center; */
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .a_v_row1_col1 {
@@ -98,10 +96,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-.area_view_row4 button:hover {
+/* .area_view_row4 button:hover {
   color: rgb(185, 1, 1);
   box-shadow: 0px 1px 5px -1px rgb(185, 0, 0);
-}
+} */
 
 .area_events_title {
   display: flex;

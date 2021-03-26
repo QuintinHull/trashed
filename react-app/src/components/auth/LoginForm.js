@@ -51,6 +51,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 
   return (
     <div className="splash">
+      <div className="splash_about">
+        <div className="splash_about_string">report trash in your area</div>
+        <div className="splash_about_string">organize clean up events</div>
+        <div className="splash_about_string">reduce waste at home</div>
+      </div>
       <div className="splash_container">
         <div className="splash_column_1">
           <div className="splash_login_container">

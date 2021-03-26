@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { deleteEvent, getEvent } from "../../store/event";
 import EditEventView from "../EditEventView";
+import DeleteEventModal from "../DeleteEventModal"
 
 import "./EventView.css"
 
@@ -17,10 +18,10 @@ const EventView = () => {
     dispatch(getEvent(id));
   }, [dispatch, id]);
 
-  const handleDelete = async () => {
-    dispatch(deleteEvent(id));
-    history.push(`/area/${singleEvent?.area_id}`);
-  };
+  // const handleDelete = async () => {
+  //   dispatch(deleteEvent(id));
+  //   history.push(`/area/${singleEvent?.area_id}`);
+  // };
 
   return (
     <div className="event_view_container">
@@ -36,7 +37,8 @@ const EventView = () => {
 
       </div>
       <div className="event_view_row3">
-        <button className="event_delete_button" onClick={() => handleDelete(singleEvent.id)}>remove</button>
+        {singleEvent && <DeleteEventModal areaId={singleEvent.area_id}/>}
+        {/* <button className="event_delete_button" onClick={() => handleDelete(singleEvent.id)}>remove</button> */}
       </div>
     </div>
   );

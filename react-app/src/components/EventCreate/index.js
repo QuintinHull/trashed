@@ -31,6 +31,9 @@ const EventCreate = ({ singleArea }) => {
     console.log(singleArea);
     setNewEvent(addedEvent);
     // dispatch(getAreaEvents(singleArea?.id));
+    setTitle("")
+    setDateTime("")
+    setDescription("")
   };
 
   return (

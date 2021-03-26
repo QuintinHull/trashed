@@ -1,0 +1,59 @@
+.delete_modal_container {
+    padding: 10px;
+}
+
+.delete_title {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.delete_buttons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.delete_cancel_button {
+    border-radius: 4px 0px 0px 4px;
+    background-color: #7fc149;
+    font-size: 1.1rem;
+    height: 30px;
+    color: black;
+    border: none;
+    margin-right: 5px;
+}
+
+.delete_confirm_button {
+    border-radius: 0px 4px 4px 0px;
+    background-color: #7fc149;
+    font-size: 1.1rem;
+    height: 30px;
+    color: black;
+    border: none;
+    margin-left: 5px;
+}
+
+.delete_cancel_button:hover {
+    color: #228ffc;
+    box-shadow: 0.5px 0.5px 1px #228ffc;
+}
+
+.delete_confirm_button:hover {
+    color: rgb(185, 1, 1);
+    box-shadow: 0.5px 0.5px 1px #228ffc;
+}
+
+.delete_open_modal {
+    background-color: #7fc149;
+    font-family: "Poppins", sans-serif;
+    border-radius: 4px;
+    border: none;
+    font-size: 2rem;
+    height: 50px;
+}
+
+.delete_open_modal:hover {
+    color: rgb(185, 1, 1);
+    box-shadow: 0px 1px 5px -1px rgb(185, 0, 0);
+}

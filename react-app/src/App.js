@@ -19,6 +19,7 @@ import TypeView from "./components/TypeView";
 import SingleItemView from "./components/SingleItemView";
 import Footer from "./components/Footer";
 import About from "./components/About"
+import { ModalProvider } from "./context/Modal"
 
 const store = configureStore();
 
@@ -44,99 +45,101 @@ function App() {
 
   return (
     <ReduxProvider store={store}>
-      <BrowserRouter>
-        <NavBar
-          authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-        />
-        <Switch>
-          <Route path="/login" exact={true}>
-            <LoginForm
-              authenticated={authenticated}
-              setAuthenticated={setAuthenticated}
-            />
-          </Route>
-          <Route path="/about-trashed" exact={true}>
-            <About />
-          </Route>
-          <Route path="/sign-up" exact={true}>
-            <SignUpForm
-              authenticated={authenticated}
-              setAuthenticated={setAuthenticated}
-            />
-          </Route>
-          <ProtectedRoute
-            path="/users"
-            exact={true}
+      <ModalProvider>
+        <BrowserRouter>
+          <NavBar
             authenticated={authenticated}
-          >
-            <UsersList />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/users/:userId"
-            exact={true}
-            authenticated={authenticated}
-          >
-            <User />
-          </ProtectedRoute>
-          <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
-            <HomePage
+            setAuthenticated={setAuthenticated}
+          />
+          <Switch>
+            <Route path="/login" exact={true}>
+              <LoginForm
+                authenticated={authenticated}
+                setAuthenticated={setAuthenticated}
+              />
+            </Route>
+            <Route path="/about-trashed" exact={true}>
+              <About />
+            </Route>
+            <Route path="/sign-up" exact={true}>
+              <SignUpForm
+                authenticated={authenticated}
+                setAuthenticated={setAuthenticated}
+              />
+            </Route>
+            <ProtectedRoute
+              path="/users"
+              exact={true}
               authenticated={authenticated}
-              setAuthenticated={setAuthenticated}
-              setShowLogin={setShowLogin}
+            >
+              <UsersList />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/users/:userId"
+              exact={true}
+              authenticated={authenticated}
+            >
+              <User />
+            </ProtectedRoute>
+            <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
+              <HomePage
+                authenticated={authenticated}
+                setAuthenticated={setAuthenticated}
+                setShowLogin={setShowLogin}
+                setShowSignUp={setShowSignUp}
+              />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/area/:id"
+              exact={true}
+              authenticated={authenticated}
               setShowSignUp={setShowSignUp}
-            />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/area/:id"
-            exact={true}
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <AreaView />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/event/:id"
-            exact={true}
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <EventView />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/locate"
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <SearchResult />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/type"
-            exact={true}
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <TypeView />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/type/:id"
-            exact={true}
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <ItemView />
-          </ProtectedRoute>
-          <ProtectedRoute
-            path="/item/:id"
-            exact={true}
-            authenticated={authenticated}
-            setShowSignUp={setShowSignUp}
-          >
-            <SingleItemView />
-          </ProtectedRoute>
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+            >
+              <AreaView />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/event/:id"
+              exact={true}
+              authenticated={authenticated}
+              setShowSignUp={setShowSignUp}
+            >
+              <EventView />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/locate"
+              authenticated={authenticated}
+              setShowSignUp={setShowSignUp}
+            >
+              <SearchResult />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/type"
+              exact={true}
+              authenticated={authenticated}
+              setShowSignUp={setShowSignUp}
+            >
+              <TypeView />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/type/:id"
+              exact={true}
+              authenticated={authenticated}
+              setShowSignUp={setShowSignUp}
+            >
+              <ItemView />
+            </ProtectedRoute>
+            <ProtectedRoute
+              path="/item/:id"
+              exact={true}
+              authenticated={authenticated}
+              setShowSignUp={setShowSignUp}
+            >
+              <SingleItemView />
+            </ProtectedRoute>
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </ModalProvider>
     </ReduxProvider>
   );
 }

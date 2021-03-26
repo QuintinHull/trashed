@@ -31,7 +31,7 @@ const SearchResult = () => {
           </div>
           <div>
             <span className="search_result_span">reported by: </span>
-            {area && area.description}
+            {area && area.first_name} {area && area.last_name}
           </div>
           <div className="s_r_bottom_row">
             <div>

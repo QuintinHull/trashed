@@ -12,3 +12,17 @@ body {
 #root {
   height: 100vh;
 }
+
+input {
+  padding-left: 7px;
+}
+
+textarea {
+  padding-left: 7px;
+}
+
+select {
+  padding-left: 3px;
+}
+
+

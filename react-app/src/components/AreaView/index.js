@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
-import { deleteArea, getArea } from "../../store/area";
+import { useParams } from "react-router-dom";
+import { getArea } from "../../store/area";
 // import { getAreaEvents } from "../../store/event";
 import { currentUser } from "../../store/session";
 import EditAreaView from "../EditAreaView";
 import EventCreate from "../EventCreate";
 import AreaEventView from "../AreaEventView";
+import DeleteAreaModal from "../DeleteAreaModal";
 
 import "./AreaView.css";
 
 const AreaView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
 
   const singleArea = useSelector((state) => state.areas.area);
   // const areaEvents = useSelector((state) => state.events.all_area_events);
@@ -30,10 +31,10 @@ const AreaView = () => {
     dispatch(getArea(id));
   }, [dispatch, id]);
 
-  const handleDelete = async () => {
-    dispatch(deleteArea(id));
-    history.push(`/`);
-  };
+  // const handleDelete = async () => {
+  //   dispatch(deleteArea(id));
+  //   history.push(`/`);
+  // };
 
   return (
     <div className="area_view_container">
@@ -94,7 +95,8 @@ const AreaView = () => {
       }
       <div className="area_view_row4">
         {/* <div className="area_delete_button_title">remove this area by marking it clean:</div> */}
-        <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button>
+        <DeleteAreaModal />
+        {/* <button className="area_delete_button" onClick={() => handleDelete(singleArea.id)}>CLEANED</button> */}
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
-import { deleteEvent, getEvent } from "../../store/event";
+import { useParams } from "react-router-dom";
+import { getEvent } from "../../store/event";
+import DeleteEventModal from "../DeleteEventModal";
 import EditEventView from "../EditEventView";
 
 import "./EventView.css"
@@ -9,7 +10,7 @@ import "./EventView.css"
 const EventView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
   const singleEvent = useSelector((state) => state.events.event);
   // console.log(singleEvent);
 
@@ -17,10 +18,10 @@ const EventView = () => {
     dispatch(getEvent(id));
   }, [dispatch, id]);
 
-  const handleDelete = async () => {
-    dispatch(deleteEvent(id));
-    history.push(`/area/${singleEvent?.area_id}`);
-  };
+  // const handleDelete = async () => {
+  //   dispatch(deleteEvent(id));
+  //   history.push(`/area/${singleEvent?.area_id}`);
+  // };
 
   return (
     <div className="event_view_container">
@@ -36,7 +37,8 @@ const EventView = () => {
 
       </div>
       <div className="event_view_row3">
-        <button className="event_delete_button" onClick={() => handleDelete(singleEvent.id)}>remove</button>
+        {singleEvent && <DeleteEventModal singleEvent={singleEvent} />}
+        {/* <button className="event_delete_button" onClick={() => handleDelete(singleEvent.id)}>remove</button> */}
       </div>
     </div>
   );

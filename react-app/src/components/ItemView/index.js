@@ -27,7 +27,7 @@ const ItemView = () => {
       <div className="item_row1">
         <div className="item_col1">
           <div className="item_image">
-            <img src={`${imagePath}/carousel_${id}.svg`} alt="type image"></img>
+            <img src={`${imagePath}/carousel_${id}.svg`} alt="type"></img>
           </div>
         </div>
         <div className="item_col2">

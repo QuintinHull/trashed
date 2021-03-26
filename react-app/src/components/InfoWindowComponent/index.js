@@ -1,5 +1,5 @@
 import React from "react"
-import {NavLink} from "react-router-dom"
+// import {NavLink} from "react-router-dom"
 
 const InfoWindowComponent = ({selectedArea}) => {
     
@@ -8,7 +8,7 @@ const InfoWindowComponent = ({selectedArea}) => {
     return (
         <div className="info_window_body">
             <div className="info_window_col1">
-                <img src={`${iconPath}/simpleLogo.svg`}></img>
+                <img src={`${iconPath}/simpleLogo.svg`} alt="trashed logo"></img>
             </div>
             <div className="info_window_col2">
                 <div className="i_w_col2_row1">

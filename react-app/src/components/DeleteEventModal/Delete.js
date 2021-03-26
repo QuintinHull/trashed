@@ -1,18 +1,19 @@
 import React from "react";
-import { deleteArea } from "../../store/area";
+import { deleteEvent } from "../../store/event";
 import { useHistory, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import "./DeleteAreaModal.css"
+import "./DeleteEventModal.css"
 
-function Delete() {
+function Delete({singleEvent}) {
     const { id } = useParams();
     const dispatch = useDispatch();
     const history = useHistory();
+    const area = singleEvent?.area_id;
 
     const handleDelete = async () => {
-    dispatch(deleteArea(id));
-    history.push(`/`);
+    dispatch(deleteEvent(id));
+    history.push(`/area/${area}`);
   };
 
   const handleCancel = async () => {
@@ -23,12 +24,12 @@ function Delete() {
   return (
     <div className="delete_modal_container">
         <div className="delete_title">
-          <div>
-            Once this item is deleted, it cannot be undone.
-          </div>
-          <div>
-            Are you certain you want to continue?
-          </div>
+            <div>
+              Once this event is deleted, it cannot be undone.
+            </div>
+            <div>
+              Are you certain you want to continue?
+            </div>
         </div>
         <div className="delete_buttons">
             <button className="delete_cancel_button" onClick={() => handleCancel(id)}>cancel</button>

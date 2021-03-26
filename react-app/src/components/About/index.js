@@ -9,7 +9,7 @@ const About = () => {
         <div className="about_container">
             <div className="about_row1">
                 <div className="about_col1">
-                    {<img className="about_image" src={`${imagePath}/aboutImage.svg`}></img>}
+                    {<img className="about_image" src={`${imagePath}/aboutImage.svg`} alt="developer"></img>}
                 </div>
                 <div className="about_col2">
                     <div>welcome to trashed</div>

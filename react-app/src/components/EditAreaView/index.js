@@ -121,7 +121,7 @@ const EditAreaView = ({ singleArea }) => {
       latitude: lat,
       longitude: lng,
     };
-    console.log(updatedArea);
+    // console.log(updatedArea);
     const areaWithChange = dispatch(updateArea(updatedArea));
     dispatch(getArea(areaId));
     setUpdatedArea(areaWithChange);

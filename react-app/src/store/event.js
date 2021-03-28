@@ -137,7 +137,7 @@ const eventReducer = (state = initialState, action) => {
       return newState;
     case CREATE_EVENT:
       const new_event = action.payload.event;
-      console.log("--event reducer, action.payload-->", action.payload);
+      // console.log("--event reducer, action.payload-->", action.payload);
       all_area_events = state.all_area_events;
       newState = {
         all_area_events: { ...all_area_events, [new_event.id]: new_event },

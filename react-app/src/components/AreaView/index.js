@@ -20,14 +20,12 @@ const AreaView = () => {
   // const areaEvents = useSelector((state) => state.events.all_area_events);
   const creator = useSelector((state) => state.session.user);
 
-  // console.log(singleArea?.id);
-
   useEffect(() => {
     dispatch(currentUser());
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("area view");
+    // console.log("area view");
     dispatch(getArea(id));
   }, [dispatch, id]);
 

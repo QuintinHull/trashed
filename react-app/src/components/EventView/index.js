@@ -10,18 +10,11 @@ import "./EventView.css"
 const EventView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  // const history = useHistory();
   const singleEvent = useSelector((state) => state.events.event);
-  // console.log(singleEvent);
 
   useEffect(() => {
     dispatch(getEvent(id));
   }, [dispatch, id]);
-
-  // const handleDelete = async () => {
-  //   dispatch(deleteEvent(id));
-  //   history.push(`/area/${singleEvent?.area_id}`);
-  // };
 
   return (
     <div className="event_view_container">

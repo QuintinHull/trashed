@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-// import { getAreaEvents } from "../../store/event";
 import { createEvent } from "../../store/event";
 
 import "./EventCreate.css";
@@ -27,10 +26,8 @@ const EventCreate = ({ singleArea }) => {
     };
 
     const addedEvent = dispatch(createEvent(newEvent));
-    // console.log("added event", addedEvent);
-    // console.log(singleArea);
     setNewEvent(addedEvent);
-    // dispatch(getAreaEvents(singleArea?.id));
+  
     setTitle("")
     setDateTime("")
     setDescription("")

@@ -72,10 +72,6 @@ export const createEvent = ({
   description,
   areaId,
 }) => async (dispatch) => {
-  // console.log("title", title);
-  // console.log("date_time", typeof date_time);
-  // console.log("description", description);
-  // console.log("areaId", areaId);
   const response = await fetch(`/api/events/${areaId}`, {
     method: "POST",
     headers: {
@@ -137,7 +133,6 @@ const eventReducer = (state = initialState, action) => {
       return newState;
     case CREATE_EVENT:
       const new_event = action.payload.event;
-      // console.log("--event reducer, action.payload-->", action.payload);
       all_area_events = state.all_area_events;
       newState = {
         all_area_events: { ...all_area_events, [new_event.id]: new_event },

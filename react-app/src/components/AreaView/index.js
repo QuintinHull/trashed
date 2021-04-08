@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getArea } from "../../store/area";
-// import { getAreaEvents } from "../../store/event";
 import { currentUser } from "../../store/session";
 import EditAreaView from "../EditAreaView";
 import EventCreate from "../EventCreate";
@@ -14,27 +13,17 @@ import "./AreaView.css";
 const AreaView = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  // const history = useHistory();
 
   const singleArea = useSelector((state) => state.areas.area);
-  // const areaEvents = useSelector((state) => state.events.all_area_events);
   const creator = useSelector((state) => state.session.user);
-
-  // console.log(singleArea?.id);
 
   useEffect(() => {
     dispatch(currentUser());
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("area view");
     dispatch(getArea(id));
   }, [dispatch, id]);
-
-  // const handleDelete = async () => {
-  //   dispatch(deleteArea(id));
-  //   history.push(`/`);
-  // };
 
   return (
     <div className="area_view_container">

@@ -7,7 +7,6 @@ import "./AreaEventView.css";
 
 const AreaEventView = ({ singleArea }) => {
   const dispatch = useDispatch();
-  // console.log(singleArea.id);
 
   const areaEvents = useSelector((state) => state.events.all_area_events);
   const creator = useSelector((state) => state.session.user);

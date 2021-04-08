@@ -155,15 +155,10 @@ const areaReducer = (state = initialState, action) => {
     case UPDATE_AREA:
       const updatedArea = action.payload.area;
       all_areas = state.all_areas;
-      // newState = { area: { [updatedArea.id]: updatedArea } };
-      //   newState = Object.assign( {}, state, { ...all_areas, [updatedArea.id]: updatedArea } );
       newState = { area: updatedArea };
       return newState;
     case DELETE_AREA:
-      // newState = Object.assign({}, state);
-      // delete newState.all_areas[action.payload.id];
       newState = Object.assign({}, state);
-      // console.log("-------->", newState);
       delete newState.area;
       return newState;
     case SEARCH_AREA:

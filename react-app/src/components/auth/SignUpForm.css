@@ -13,6 +13,7 @@
 .signup_row_2 {
   align-self: center;
   margin-top: 0.5rem;
+  margin-right: 10px;
 }
 
 .signup_row_2 input {
@@ -28,6 +29,7 @@
 .signup_row_3 {
   align-self: center;
   margin-top: 0.5rem;
+  margin-right: 10px;
 }
 
 .signup_row_3 input {
@@ -43,6 +45,7 @@
 .signup_row_4 {
   align-self: center;
   margin-top: 0.5rem;
+  margin-right: 10px;
 }
 
 .signup_row_4 input {
@@ -58,7 +61,7 @@
 .signup_row_5 {
   align-self: center;
   margin-top: 0.5rem;
-  align-self: center;
+  margin-right: 10px;
 }
 
 .signup_row_5 input {
@@ -74,6 +77,7 @@
 .signup_row_6 {
   margin-top: 0.5rem;
   align-self: center;
+  margin-right: 10px;
 }
 
 .signup_row_6 input {

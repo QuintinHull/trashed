@@ -6,27 +6,9 @@
 
 ## Technologies used in Trashed
 
-**JavaScript**
+**JavaScript** **Python** **SQLAlchemy** **Flask** **React** **Redux**
 
-**Python**
-
-**SQLAlchemy**
-
-**Flask** 
-
-**React**
-
-**Redux**
-
-**Google Maps API**
-
-**Geocode API**
-
-**CSS**
-
-**Docker**
-
-**Heroku** 
+**Google Maps API** **Geocode API** **HTML** **CSS** **Docker** **Heroku** 
 
 ## Features implemented
 
@@ -46,10 +28,10 @@ Implementing Geocode to obtain the latitude and longitude of each created area p
 
 ## Getting started
 
-1. Clone this repository (only this branch)
+1. Clone the repository
 
    ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
+   git clone https://github.com/QuintinHull/trashed.git
    ```
 
 2. Install dependencies
@@ -93,7 +75,7 @@ Implementing Geocode to obtain the latitude and longitude of each created area p
 
 *ALSO IMPORTANT!*
    psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
+   There is a layer in the Dockerfile that will install psycopg2 (not binary) for you.
 ***
 
 ## Deploy to Heroku

@@ -1,14 +1,16 @@
-# Trashed is an organizational tool to help users keep their communities clean. 
+[![Untitled-drawing-4.png](https://i.postimg.cc/L5pzcjJj/Untitled-drawing-4.png)](https://postimg.cc/cgFgYgMJ)
 
-<h2>Try the site live: <a href=https://trash-ed.herokuapp.com/login/>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h2>
+## Trashed is an organizational tool to help users keep their communities clean. 
+
+<h3>Try the site live: <a href=https://trash-ed.herokuapp.com/login/>Here</a> <b>|</b> Check out our <a href="https://github.com/QuintinHull/trashed">documentation</a></h3>
 
 [![Screen-Shot-2021-03-23-at-6-38-18-PM.png](https://i.postimg.cc/DfxBbYSk/Screen-Shot-2021-03-23-at-6-38-18-PM.png)](https://postimg.cc/z3Rns7w0)
 
 ## Technologies used in Trashed
 
-**JavaScript** **Python** **SQLAlchemy** **Flask** **React** **Redux**
+**JavaScript** | **Python** | **SQLAlchemy** | **Flask** | **React** | **Redux**
 
-**Google Maps API** **Geocode API** **HTML** **CSS** **Docker** **Heroku** 
+**Google Maps API** | **Geocode API** | **HTML** | **CSS** | **Docker** | **Heroku** 
 
 ## Features implemented
 
@@ -22,7 +24,7 @@
 
 
 ## Challenges
-Implementing Geocode to obtain the latitude and longitude of each created area proved to be challenging. The challenge I found was coming up with a way to use Geocode that would send back the latitude and longitude before the post request was sent to the back end. For my solution I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
+It was a challenge deciding how to allow users to interact with a map and add markers to the map that didn't require them to know the latitude and longitude of the location they wished to add. After research and looking at documentation, I decided to implement a Geocode API to obtain the latitude and longitude of each created area. Another challenging aspect of this feature was finding a way to use Geocode that would send back the latitude and longitude before the post request was sent to the back end. For my solution, I used two helper functions (one for latitude and one for longitude) that utilized **Geocode.fromAddress()** and passed in an interpolated string that made up the entire address provided by the user. From there I was able to call each helper function and await the results inside of an asynchronous **handleSubmit()** before it was sent to the appropriate thunk.
 
 [![Screen-Shot-2021-03-23-at-6-36-47-PM.png](https://i.postimg.cc/X78GvTqd/Screen-Shot-2021-03-23-at-6-36-47-PM.png)](https://postimg.cc/WhdbWYM1)
 

@@ -120,5 +120,3 @@ It was a challenge deciding how to allow users to interact with a map and add ma
    ```
 
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
-
-[![logo-with-name.png](https://i.postimg.cc/507LjTns/logo-with-name.png)](https://postimg.cc/G8DH570D)

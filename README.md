@@ -1,6 +1,6 @@
 [![Untitled-drawing-4.png](https://i.postimg.cc/L5pzcjJj/Untitled-drawing-4.png)](https://postimg.cc/cgFgYgMJ)
 
-## Trashed is an organizational tool to help users keep their communities clean. 
+## Trashed is an organizational tool for users who want to take ownership in keeping their communities clean. 
 
 <h3>Try the site <a href=https://trash-ed.herokuapp.com/login/>live</a> <b>|</b> Check out the <a href="https://github.com/QuintinHull/trashed">Wiki</a> <b> | <b> Visit the developers <a href="https://quintinhull.github.io/">portfolio</a></h3> 
 
@@ -120,3 +120,6 @@ It was a challenge deciding how to allow users to interact with a map and add ma
    ```
 
 10. Under Settings find "Config Vars" and add any additional/secret .env variables.
+   
+   
+ # Thanks for reading my README!

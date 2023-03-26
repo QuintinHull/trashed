@@ -50,68 +50,71 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   const imagePath = process.env.NODE_ENV === "production" ? "/static" : "";
 
   return (
-    <div className="splash">
       <div className="splash_container">
-        <div className="splash_column_1">
-          <div className="splash_login_container">
-            <form className="splash_login_form" onSubmit={onLogin}>
-              <div className="login_row_1">
-                <div className="login_title">log in</div>
-                <div>
-                  {errors.map((error) => (
-                    <div className="login_errors">{error}</div>
-                  ))}
+        <div className="splash_row_1">
+          <div className="splash_title">TRASHED</div>
+        </div >
+        <div className="splash_row_2">
+          <div className="splash_column_1">
+            <div className="splash_signup_container">
+              <SignUpForm
+                authenticated={authenticated}
+                setAuthenticated={setAuthenticated}
+              />
+            </div>
+            <div className="splash_login_container">
+              <form className="splash_login_form" onSubmit={onLogin}>
+                <div className="login_row_1">
+                  <div className="login_title">log in</div>
+                  <div>
+                    {errors.map((error) => (
+                      <div className="login_errors">{error}</div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="login_row_2">
-                {/* <label htmlFor="email">Email</label> */}
-                <input
-                  name="email"
-                  type="text"
-                  placeholder="email"
-                  value={email}
-                  onChange={updateEmail}
-                />
-              </div>
-              <div className="login_row_3">
-                {/* <label htmlFor="password">Password</label> */}
-                <input
-                  name="password"
-                  type="password"
-                  placeholder="password"
-                  value={password}
-                  onChange={updatePassword}
-                />
-              </div>
-              <div className="login_row_4">
-                <button
-                  className="demo_button"
-                  type="submit"
-                  onClick={demoLogin}
-                >
-                  demo
-                </button>
-                <button className="login_button" type="submit">
-                  login
-                </button>
-              </div>
-            </form>
+                <div className="login_row_2">
+                  {/* <label htmlFor="email">Email</label> */}
+                  <input
+                    name="email"
+                    type="text"
+                    placeholder="email"
+                    value={email}
+                    onChange={updateEmail}
+                  />
+                </div>
+                <div className="login_row_3">
+                  {/* <label htmlFor="password">Password</label> */}
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={updatePassword}
+                  />
+                </div>
+                <div className="login_row_4">
+                  <button
+                    className="demo_button"
+                    type="submit"
+                    onClick={demoLogin}
+                  >
+                    demo
+                  </button>
+                  <button className="login_button" type="submit">
+                    login
+                  </button>
+                </div>
+              </form>
+            </div>
+            
           </div>
-        </div>
-        <div className="splash_column_2">
-          {<img src={`${imagePath}/logo_beach.svg`} alt="trashed logo"></img>}
-        </div>
-        <div className="splash_column_3">
-          <div className="splash_signup_container">
-            <SignUpForm
-              authenticated={authenticated}
-              setAuthenticated={setAuthenticated}
-            />
+          <div className="splash_column_2">
+            <div className="splash_col_2_row_1">
+              {<img className='splash_image' src={`${imagePath}/logo_beach.svg`} alt="trashed logo"></img>}
+            </div>
           </div>
         </div>
       </div>
-      <div className="splash_title">TRASHED</div>
-    </div>
   );
 };
 

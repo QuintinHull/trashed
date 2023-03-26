@@ -1,16 +1,20 @@
 .splash_signup_form {
   display: flex;
+  width: 330px;
   flex-direction: column;
-  width: 100%;
+  /* align-items: center; */
 }
 
 .signup_row_1 {
+  margin-top: 5px;
   align-self: center;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
 }
 
 .signup_row_2 {
+  /* border: 5px solid white; */
+  width: 100%;
   align-self: center;
   margin-top: 0.5rem;
 }
@@ -28,6 +32,7 @@
 .signup_row_3 {
   align-self: center;
   margin-top: 0.5rem;
+  width: 100%;
 }
 
 .signup_row_3 input {
@@ -42,6 +47,7 @@
 
 .signup_row_4 {
   align-self: center;
+  width: 100%;
   margin-top: 0.5rem;
 }
 
@@ -56,6 +62,7 @@
 }
 
 .signup_row_5 {
+  width: 100%;
   align-self: center;
   margin-top: 0.5rem;
   align-self: center;
@@ -72,6 +79,7 @@
 }
 
 .signup_row_6 {
+  width: 100%;
   margin-top: 0.5rem;
   align-self: center;
 }
